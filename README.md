@@ -1,6 +1,6 @@
 # SET.Hacks() 2021 Website
 
-![Netlify Status](https://api.netlify.com/api/v1/badges)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/043681c3-9c26-4923-86e7-61c8fd06e0eb/deploy-status)](https://app.netlify.com/sites/sethacks/deploys)
 
 ### See it live
 
@@ -30,5 +30,3 @@ Finally, open `localhost:3000` in your browser.
 - [Create React App](https://github.com/facebook/create-react-app)
 - [styled-components](https://https://www.styled-components.com/)
 - [TypeScript](https://www.typescriptlang.org/)
-
-Built by [Malav Mehta](https://github.com/malav-mehta)
