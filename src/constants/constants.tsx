@@ -54,7 +54,7 @@ export const HOME = {
 export const ABOUT_1 = {
   heading: "👉 What is *SET.Hacks()*?",
   text:
-    "A fully-online, people-focused, 24-hour hackathon that brings people together to solve the world’s biggest problems. With the COVID-19 pandemic disrupting many internships, post-secondary studies, and many student-oriented STEM opportunities, our hackathon aims to give you the power to create even during a time of crisis.",
+    "A virtual, beginner-friendly hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
   link: { label: "View SET.Hacks() 2020", href: "https://sethacks.ca" },
 };
 
@@ -68,7 +68,7 @@ export const STATS = {
 export const ABOUT_2 = {
   heading: "🚀 Code the Future",
   text:
-    "In 2016, the *United Nations* created the *Sustainable Development Goals (SDGs)* as a blueprint to create a sustainable future by 2030. Accomplishing the goals within the scope of a decade requires various political, economic, and social will. In addition, it also requires the insights and contributions of multiple individuals and companies in STEM. During this hackathon, we challenge you – as intelligent innovators and future leaders in STEM – to *create a product that will help nations accomplish one or more of the SDGs.*",
+    "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
   image: graphic2,
 };
 
@@ -78,57 +78,38 @@ export const FAQ = {
     heading: "About",
     questions: [
       {
-        q: "What is a hackathon?",
+        q: "What is a hackathon? Why should I compete?",
         a:
-          "A hackathon is an invention marathon where you can work with people around the globe to build a project!",
+          "A hackathon is an innovation marathon where “hackers” work together to design and build projects. Throughout the event, you’ll also have a chance to meet other students, attend workshops, network with mentors and sponsors, and most importantly - learn new skills! Whether you’re a beginner or an expert, SET.Hacks() is a great way to show off your ideas, build up your STEM career early, and maybe even win some prizes.",
       },
       {
-        q: "How much does it cost?",
-        a: "SET Hacks is completely free for all participants.",
-      },
-      {
-        q: "Is there a maximum team size?",
-        a: "Yep! Keep your teams to a maximum of 4 people please!",
-      },
-      {
-        q: "What if I don’t have a team?",
+        q: "Who is eligible to attend?",
         a:
-          "We will have some online team building sessions, so it doesn’t matter if you’ve not got a team!",
+          "SET.Hacks() 2021 is open to all high school students from anywhere in the world! High school seniors graduated in June 2021 are also welcome. We especially encourage beginners to join us!",
       },
       {
-        q: "How do I work with my team?",
+        q: "What if I’ve never coded before?",
         a:
-          "We strongly suggest that you make a group chat with your team members!",
+          "Don’t worry, we’ll teach you! SET.Hacks() is designed to guide beginners through the whole process of building a project from start to finish. Even if you have zero technical background, we’ll help you create something you can be proud of. Get ready to learn from workshops and mentors, and walk away from this weekend with lots of new skills!",
       },
     ],
   },
   right_bar: {
-    heading: "About",
+    heading: "More",
     questions: [
       {
-        q: "Do I need to know how to code?",
+        q: "Do I need a team to participate?",
         a:
-          "Nope! If you already know how to code, that's great! If not however, this is the perfect time to learn. We will be hosting beginner workshops for you, and we will have experienced mentors to help you with your hacks!",
+          "You can apply either as an individual or a team of up to 4 people. If you would like to participate as a team but don’t have one in mind, we’ll match you up with one before the event.",
       },
       {
-        q: "Can I work on my hack before the hackathon?",
+        q: "How much does it cost?",
         a:
-          "No. In interest of fairness, all hacks must be created at the event.",
+          "Nothing! If your application is accepted, the event is completely free to attend.",
       },
       {
-        q: "Is there stuff to do besides hacking?",
-        a:
-          "We’ll have online workshops, games and other fun activities to keep you busy!",
-      },
-      {
-        q: "What do I need for the hackathon?",
-        a:
-          "The only things you need are a laptop, solid internet connection, and any other materials you may require for creating your hack!",
-      },
-      {
-        q: "Can I volunteer as a mentor or judge?",
-        a:
-          "Yes! SET Hacks wouldn't be possible without our volunteers. We will open mentors and judges sign ups soon, so keep an eye open for those!",
+        q: "Wait, I still have a question!",
+        a: "Reach out to hello@sethacks.ca and we’ll be happy to help.",
       },
     ],
   },
@@ -137,10 +118,10 @@ export const FAQ = {
 export const SPONSORS = {
   heading: "🙌 Sponsors",
   text:
-    "Stay tuned as we announce our 2021 sponsors! Accomplishing the goals within the scope of a decade requires various political, economic, and social will. In addition, it also requires the insights and contributions of multiple individuals and companies in STEM.",
+    "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
   post: (
     <>
-      Want to join us on our journey? Send us an email at{" "}
+      Want to support student hackers? Send us an email at{" "}
       <a href="mailto:sponsor@sethacks.ca">sponsor@sethacks.ca</a>.
     </>
   ),
