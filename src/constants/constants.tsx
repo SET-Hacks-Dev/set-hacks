@@ -1,9 +1,16 @@
-import { Calendar, Download, Facebook, Instagram, MapPin } from "react-feather";
-
+import {
+  Calendar,
+  Download,
+  Facebook,
+  Instagram,
+  MapPin,
+  ArrowRight,
+} from "react-feather";
 import graphic1 from "../static/img/graphic1.png";
 import graphic2 from "../static/img/graphic2.png";
 import sponsorPackage from "../static/doc/SET.Hacks()_Sponsorship_Package.pdf";
 import { theme } from "../theme";
+import { Link, TextChildren } from "../components";
 
 const Devpost = ({ size }: { size: number }) => (
   <svg
@@ -54,15 +61,17 @@ export const HOME = {
 export const ABOUT_1 = {
   heading: "👉 What is *SET.Hacks()*?",
   text:
-    "A virtual, beginner-friendly hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
+    "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
   link: { label: "View SET.Hacks() 2020", href: "https://sethacks.ca" },
 };
 
 export const STATS = {
-  a: { label: "hours", value: "24" },
-  b: { label: "first-time hackers", value: "70%" },
-  c: { label: "hackers", value: "250+" },
-  d: { label: "projects", value: "50+" },
+  stats: [
+    { label: "hours", value: "24" },
+    { label: "first-time hackers", value: "70%" },
+    { label: "hackers", value: "250+" },
+    { label: "projects", value: "50+" },
+  ],
 };
 
 export const ABOUT_2 = {
@@ -70,6 +79,7 @@ export const ABOUT_2 = {
   text:
     "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
   image: graphic2,
+  reverse: true,
 };
 
 export const FAQ = {
@@ -78,7 +88,7 @@ export const FAQ = {
     heading: "About",
     questions: [
       {
-        q: "What is a hackathon? Why should I compete?",
+        q: "What is a hackathon?",
         a:
           "A hackathon is an innovation marathon where “hackers” work together to design and build projects. Throughout the event, you’ll also have a chance to meet other students, attend workshops, network with mentors and sponsors, and most importantly - learn new skills! Whether you’re a beginner or an expert, SET.Hacks() is a great way to show off your ideas, build up your STEM career early, and maybe even win some prizes.",
       },
@@ -109,7 +119,13 @@ export const FAQ = {
       },
       {
         q: "Wait, I still have a question!",
-        a: "Reach out to hello@sethacks.ca and we’ll be happy to help.",
+        a: (
+          <>
+            Reach out to{" "}
+            <Link href="mailto:hello@sethacks.ca">hello@sethacks.ca</Link> and
+            we’ll be happy to help.
+          </>
+        ),
       },
     ],
   },
@@ -120,24 +136,84 @@ export const SPONSORS = {
   text:
     "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
   post: (
-    <>
-      Want to support student hackers? Send us an email at{" "}
-      <a href="mailto:sponsor@sethacks.ca">sponsor@sethacks.ca</a>.
-    </>
+    <TextChildren>
+      <span style={{ fontWeight: 500 }}>Want to support student hackers?</span>{" "}
+      Send us an email at{" "}
+      <Link href="mailto:sponsor@sethacks.ca">sponsor@sethacks.ca</Link>.
+    </TextChildren>
   ),
-  maxWidth: "75%",
+  maxWidth: "700px",
   button: {
     leftIcon: Download,
     label: "Sponsorship Package",
+    isLink: true,
     target: sponsorPackage,
   },
 };
-
 export const CONTACT = {
   heading: "📧 Still have a question?",
+  className: "d-flex align-items-center flex-column",
   post: (
-    <>
-      Send us an email <a href="mailto:hello@sethacks.ca">hello@sethacks.ca</a>
-    </>
+    <TextChildren>
+      Send us an email{" "}
+      <Link href="mailto:hello@sethacks.ca">hello@sethacks.ca</Link>
+    </TextChildren>
   ),
+};
+
+export const FOOTER = {
+  messages: [
+    {
+      title: "SET.Hacks() is an initiative by the SET Foundation.",
+      text: "Learn more about the SET Foundation and our other events.",
+      button: {
+        label: "Learn more",
+        rightIcon: ArrowRight,
+        isLink: true,
+        target: "https://setfoundation.ca",
+      },
+    },
+  ],
+  social: [
+    { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
+    { icon: Instagram, url: "https://www.instagram.com/setfoundation/" },
+    { icon: Devpost, url: "https://set-hacks.devpost.com" },
+  ],
+  groups: [
+    {
+      heading: "Foundation",
+      links: [
+        { label: "Initiatives", href: "/#initiatives" },
+        { label: "About Us", href: "/#about" },
+        { label: "Our Team", href: "/#team" },
+      ],
+    },
+    {
+      heading: "Conference",
+      links: [
+        { label: "About SET", href: "/conference#about" },
+        { label: "Why Attend", href: "/conference#why" },
+        { label: "Schedule", href: "/conference#schedule" },
+        { label: "Past", href: "/conference#past" },
+      ],
+    },
+    {
+      heading: "Conference",
+      links: [
+        { label: "About SET", href: "/conference#about" },
+        { label: "Why Attend", href: "/conference#why" },
+        { label: "Schedule", href: "/conference#schedule" },
+        { label: "Past", href: "/conference#past" },
+      ],
+    },
+    {
+      heading: "UP",
+      links: [
+        { label: "About SET.UP", href: "/up#about" },
+        { label: "Speakers", href: "/up#speakers" },
+        { label: "Schedule", href: "/up#schedule" },
+        { label: "Register", href: "/up#register" },
+      ],
+    },
+  ],
 };

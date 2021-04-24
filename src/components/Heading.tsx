@@ -19,13 +19,20 @@ type HeaderProps = {
 
 const Heading = ({
   children = "",
-  sizeXs = "4xl",
-  sizeLg = "5xl",
+  sizeXs = "2xl",
+  sizeLg = "3xl",
+  className = "",
   toRender = true,
   other,
 }: HeaderProps) => {
   return (
-    <StyledHeader sizeXs={sizeXs} sizeLg={sizeLg} {...other}>
+    // @ts-ignore
+    <StyledHeader
+      sizeXs={sizeXs}
+      sizeLg={sizeLg}
+      className={className}
+      {...other}
+    >
       {toRender ? render(children!.toString()) : children}
     </StyledHeader>
   );

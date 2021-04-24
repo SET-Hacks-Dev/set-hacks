@@ -1,6 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useEffect, useState } from "react";
-
 import { ArrowRight } from "react-feather";
 import Button from "./Button";
 import render from "./render";
@@ -16,8 +15,8 @@ const StyledBrand = styled(Navbar.Brand)`
   font-weight: 600;
 `;
 
-const StyledNavLink = styled(Nav.Item)`
-  color: ${({ theme }) => theme.colors.brand[900]};
+const StyledNavLink = styled(Nav.Link)`
+  color: ${({ theme }) => theme.colors.brand[800]} !important;
   cursor: pointer;
   font-weight: 500;
   margin-right: 2rem;

@@ -15,7 +15,11 @@ const render = (text: string) => {
   for (let i = 0; i < textMap.length; i++) {
     if (i % 2 === 0) jsxMap.push(textMap[i]);
     else
-      jsxMap.push(<Accent key={hashString(textMap[i])}>{textMap[i]}</Accent>);
+      jsxMap.push(
+        <Accent key={hashString(textMap[i])}>
+          <span style={{ fontWeight: 600 }}>{textMap[i]}</span>
+        </Accent>
+      );
   }
   return <>{jsxMap}</>;
 };
