@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
   & > div {
     box-sizing: border-box;
     flex: 0 50%;
-    ${media.md`flex: 0 25%`};
+    ${media.lg`flex: 0 25%`};
   }
 `;
 
@@ -35,33 +35,33 @@ const StyledStat = styled.div`
   &:first-child {
     border-top-left-radius: ${theme.borderRadius.lg};
     border-bottom: none;
-    ${media.md`border-bottom: 1px solid ${borderColor}`};
-    ${media.md`border-bottom-left-radius: ${theme.borderRadius.lg}`};
+    ${media.lg`border-bottom: 1px solid ${borderColor}`};
+    ${media.lg`border-bottom-left-radius: ${theme.borderRadius.lg}`};
   }
   &:nth-child(2) {
     border-top-right-radius: ${theme.borderRadius.lg};
-    ${media.md`border-top-right-radius: 0`};
+    ${media.lg`border-top-right-radius: 0`};
     border-left: none;
     border-bottom: none;
-    ${media.md`border-bottom: 1px solid ${borderColor}`};
+    ${media.lg`border-bottom: 1px solid ${borderColor}`};
   }
   &:nth-child(3) {
     border-bottom-left-radius: ${theme.borderRadius.lg};
-    ${media.md`border-bottom-left-radius: 0`};
-    ${media.md`border-left: none`};
+    ${media.lg`border-bottom-left-radius: 0`};
+    ${media.lg`border-left: none`};
   }
   &:nth-child(4) {
     border-bottom-right-radius: ${theme.borderRadius.lg};
     border-top-right-radius: 0;
     border-left: none;
-    ${media.md`border-top-right-radius: ${theme.borderRadius.lg}`};
+    ${media.lg`border-top-right-radius: ${theme.borderRadius.lg}`};
   }
 `;
 
 const Value = styled.h2`
   color: ${theme.colors.brand["800"]};
   font-size: 50px;
-  ${media.md`font-size: 75px`};
+  ${media.lg`font-size: 75px`};
   font-weight: 600;
 `;
 

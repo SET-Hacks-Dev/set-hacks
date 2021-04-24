@@ -7,6 +7,9 @@ export * from "./Button";
 export { default as Chip } from "./Chip";
 export * from "./Chip";
 
+export { default as Footer } from "./Footer";
+export * from "./Footer";
+
 export { default as Heading } from "./Heading";
 export * from "./Heading";
 

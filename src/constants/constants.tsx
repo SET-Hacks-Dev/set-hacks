@@ -177,7 +177,6 @@ export const FOOTER = {
   social: [
     { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
     { icon: Instagram, url: "https://www.instagram.com/setfoundation/" },
-    { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
   groups: [
     {
@@ -186,15 +185,6 @@ export const FOOTER = {
         { label: "Initiatives", href: "/#initiatives" },
         { label: "About Us", href: "/#about" },
         { label: "Our Team", href: "/#team" },
-      ],
-    },
-    {
-      heading: "Conference",
-      links: [
-        { label: "About SET", href: "/conference#about" },
-        { label: "Why Attend", href: "/conference#why" },
-        { label: "Schedule", href: "/conference#schedule" },
-        { label: "Past", href: "/conference#past" },
       ],
     },
     {

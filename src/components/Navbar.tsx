@@ -8,6 +8,7 @@ import styled from "styled-components";
 const StyledNavbar = styled(Navbar)`
   transform: translateY(${(props) => (props.show ? "0" : "-100%")});
   transition: 0.5s transform cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: ${({ theme }) => theme.colors.brand[200]};
 `;
 
 const StyledBrand = styled(Navbar.Brand)`
@@ -89,7 +90,7 @@ const HNavbar = ({ brand, links, actionButton }: NavbarProps) => {
               </StyledNavLink>
             ))}
           </Nav>
-          <div className="mt-lg-0 mt-3">
+          <div className="mt-lg-0 mt-3 mb-3 mb-lg-0">
             <Button {...actionButton} isLink={true} rightIcon={ArrowRight} />
           </div>
         </Navbar.Collapse>

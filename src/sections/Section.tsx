@@ -46,7 +46,7 @@ const Section = ({
           )}
         </Col>
         {image && (
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} className={"d-flex justify-content-center"}>
             <Image src={image} alt={heading + " Graphic"} fluid />
           </Col>
         )}

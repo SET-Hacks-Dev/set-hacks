@@ -7,8 +7,9 @@ import {
   FAQ,
   SPONSORS,
   CONTACT,
+  FOOTER,
 } from "../constants";
-import { Navbar, Anchor, Stats, Spacer } from "../components";
+import { Navbar, Footer, Anchor, Stats, Spacer } from "../components";
 
 const Base = () => {
   return (
@@ -27,6 +28,7 @@ const Base = () => {
       <Spacer sz={14} />
       <Section {...CONTACT} />
       <Spacer sz={22.5} />
+      <Footer {...FOOTER} />
     </>
   );
 };
