@@ -62,7 +62,7 @@ export const ABOUT_1 = {
   heading: "👉 What is *SET.Hacks()*?",
   text:
     "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
-  link: { label: "View SET.Hacks() 2020", href: "https://sethacks.ca" },
+  link: { label: "View SET.Hacks() 2020", href: "https://sethacks.ca/2020" },
 };
 
 export const STATS = {
