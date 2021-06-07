@@ -14,8 +14,8 @@ The SET.Hacks() 2021 website, built with React.
 First, clone the repo:
 
 ```
-$ git clone https://github.com/malav-mehta/sethacks.ca.git
-$ cd sethacks.ca
+$ git clone https://github.com/malav-mehta/set-hacks.git
+$ cd set-hacks
 ```
 
 Then install the dependencies and get it running:
