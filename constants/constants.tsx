@@ -50,7 +50,7 @@ export const HOME = {
   ],
   socialMedia: [
     { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
-    { icon: Instagram, url: "https://www.instagram.com/setfoundation/" },
+    { icon: Instagram, url: "https://www.instagram.com/set.ottawa/" },
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
   image: "/img/graphic1.png",
