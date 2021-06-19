@@ -1,17 +1,17 @@
-import { Hero, Section, MailingList, Faq } from "../sections";
 import {
-  NAVIGATION,
   ABOUT_1,
-  STATS,
   ABOUT_2,
-  FAQ,
-  SPONSORS,
   CONTACT,
+  FAQ,
   FOOTER,
+  NAVIGATION,
+  SPONSORS,
+  STATS,
 } from "../constants";
-import { Navbar, Footer, Anchor, Stats, Spacer } from "../components";
+import { Anchor, Footer, Navbar, Spacer, Stats } from "../components";
+import { Faq, Hero, MailingList, Section } from "../sections";
 
-const Base = () => {
+const Index = () => {
   return (
     <>
       <Navbar {...NAVIGATION} />
@@ -33,4 +33,4 @@ const Base = () => {
   );
 };
 
-export default Base;
+export default Index;

@@ -1,6 +1,7 @@
-import styled from "styled-components";
 import {media, theme} from "../theme";
+
 import {renderIcon} from "./render";
+import styled from "styled-components";
 
 const StyledChip = styled.p`
   color: ${({theme, accent}: { theme: any; accent: boolean }) =>
@@ -8,7 +9,7 @@ const StyledChip = styled.p`
   font-size: ${({theme}) => theme.fontSizes.lg};
   ${media.lg`font-size: ${theme.fontSizes.xl}`};
   font-weight: 600;
-
+  margin-right: 1rem;
 `;
 
 type ChipProps = {
@@ -21,7 +22,7 @@ const Chip = ({icon, label, accent = false}: ChipProps) => {
     return (
         <StyledChip accent={accent} className="mr-5">
             {renderIcon(icon)}
-            <span className="ml-2">{label}</span>
+            <span style={{marginLeft: "10px"}}>{label}</span>
         </StyledChip>
     );
 };

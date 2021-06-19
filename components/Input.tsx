@@ -1,6 +1,6 @@
+import {media} from "../theme";
 import {rgba} from "polished";
 import styled from "styled-components";
-import {media} from "../theme";
 
 const StyledInput = styled.input.attrs({
     className: "form-control",
@@ -11,13 +11,14 @@ const StyledInput = styled.input.attrs({
   color: ${({theme}) => rgba(theme.colors.brand[800], 0.95)};
   font-size: ${({theme}) => theme.fontSizes.md};
   font-weight: 500;
-  padding: 1.6rem 1.3rem;
+  padding: 0.85rem 1.3rem;
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   outline: 0;
 
   width: 10rem;
   ${media.sm`width: 15rem`};
   margin: 0;
+  margin-right: 0.5rem;
 
   &:hover,
   &:active,

@@ -1,16 +1,14 @@
 import {
+  ArrowRight,
   Calendar,
   Download,
   Facebook,
   Instagram,
   MapPin,
-  ArrowRight,
 } from "react-feather";
-import graphic1 from "../static/img/graphic1.png";
-import graphic2 from "../static/img/graphic2.png";
-import sponsorPackage from "../static/doc/SET.Hacks()_Sponsorship_Package.pdf";
-import { theme } from "../theme";
 import { Link, TextChildren } from "../components";
+
+import { theme } from "../theme";
 
 const Devpost = ({ size }: { size: number }) => (
   <svg
@@ -55,7 +53,7 @@ export const HOME = {
     { icon: Instagram, url: "https://www.instagram.com/setfoundation/" },
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
-  image: graphic1,
+  image: "/img/graphic1.png",
 };
 
 export const ABOUT_1 = {
@@ -78,7 +76,7 @@ export const ABOUT_2 = {
   heading: "🚀 Code the Future",
   text:
     "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
-  image: graphic2,
+  image: "/img/graphic2.png",
   reverse: true,
 };
 
@@ -147,7 +145,7 @@ export const SPONSORS = {
     leftIcon: Download,
     label: "Sponsorship Package",
     isLink: true,
-    target: sponsorPackage,
+    target: "/doc/SET.Hacks()_Sponsorship_Package.pdf",
   },
 };
 export const CONTACT = {

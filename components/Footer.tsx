@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import { rgba } from "polished";
 import Button, { ButtonProps } from "./Button";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import { media, theme } from "../theme";
+
 import { hashString } from "react-hash-string";
 import { renderIcon } from "./render";
-import { media, theme } from "../theme";
+import { rgba } from "polished";
+import styled from "styled-components";
 
 const StyledBackground = styled.div`
   background-color: ${theme.colors.brand[800]};
@@ -68,7 +69,7 @@ const StyledLink = styled.a`
 const StyledHr = styled.hr`
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const StyledIconContainer = styled.div`
