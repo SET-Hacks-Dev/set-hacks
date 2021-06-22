@@ -83,7 +83,7 @@ const HNavbar = ({ brand, links, actionButton }: NavbarProps) => {
         <StyledBrand href="/">{render(brand)}</StyledBrand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+          <Nav className="ms-auto">
             {links.map((link: NavItemProps) => (
               <StyledNavLink key={link.href} href={link.href}>
                 {link.label}
