@@ -83,9 +83,10 @@ type StatProps = {
 
 type StatsProps = {
   stats: StatProps[];
+  caption: string;
 };
 
-const Stats = ({ stats }: StatsProps) => {
+const Stats = ({ stats, caption }: StatsProps) => {
   return (
     <StyledContainer className="my-5">
       <Row>
@@ -100,6 +101,7 @@ const Stats = ({ stats }: StatsProps) => {
           </StyledWrapper>
         </Col>
       </Row>
+      <p className="mt-4">{caption}</p>
     </StyledContainer>
   );
 };

@@ -19,9 +19,12 @@ const Index = () => {
       <Anchor i="about" />
       <Section {...ABOUT_1} />
       <Stats {...STATS} />
-      <Section {...ABOUT_2} post={<MailingList />} />
+      {/* <Section {...ABOUT_2} post={<MailingList />} /> */}
+      <Section {...ABOUT_2} />
+      <Spacer sz={14} />
       <Anchor i="faq" />
       <Faq {...FAQ} />
+      <Spacer sz={4} />
       <Anchor i="sponsors" />
       <Section {...SPONSORS} />
       <Anchor i="contact" />

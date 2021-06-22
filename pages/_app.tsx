@@ -36,9 +36,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         content="SET.Hacks() is a 24-hour virtual hackathon brought to you by the SET Foundation."
         />
 
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="logo192.png" />
+        <link rel="manifest" href="manifest.json" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossOrigin="anonymous"></link>
       </Head>
       <GlobalStyle />

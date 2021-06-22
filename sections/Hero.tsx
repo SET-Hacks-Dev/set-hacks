@@ -52,7 +52,7 @@ const Hero = () => {
         <Col
           xs={12}
           lg={6}
-          className="d-flex align-items-center justify-content-center mt-5 mt-lg-0"
+          className="d-flex align-items-center justify-content-start mt-5 mt-lg-0"
         >
           <Image src={HOME.image} alt="Hero" fluid />
         </Col>
