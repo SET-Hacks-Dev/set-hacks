@@ -21,33 +21,33 @@ type FaqProps = {
 
 const Faq = ({ heading, left_bar, right_bar }: FaqProps) => {
   return (
-    <Tilted color={theme.colors.brand["200"]}>
-      <Container>
-        <Row className={"mb-4"}>
-          <Col xs={12}>
-            <Heading>{heading}</Heading>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} md={6}>
-            <Heading sizeXs={"xl"} sizeLg={"2xl"} className={"mb-4 mt-1"}>
+    // <Tilted color={theme.colors.brand["200"]}>
+    <Container>
+      <Row className={"mb-4"}>
+        <Col xs={12}>
+          <Heading>{heading}</Heading>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12} md={6}>
+          {/* <Heading sizeXs={"xl"} sizeLg={"2xl"} className={"mb-4 mt-1"}>
               {left_bar.heading}
-            </Heading>
-            {left_bar.questions.map((q: FaqQuestionProps) => (
-              <Question q={q.q} a={q.a} key={hashString(q.q)} />
-            ))}
-          </Col>
-          <Col xs={12} md={6}>
-            <Heading sizeXs={"xl"} sizeLg={"2xl"} className={"mb-4 mt-1"}>
+            </Heading> */}
+          {left_bar.questions.map((q: FaqQuestionProps) => (
+            <Question q={q.q} a={q.a} key={hashString(q.q)} />
+          ))}
+        </Col>
+        <Col xs={12} md={6}>
+          {/* <Heading sizeXs={"xl"} sizeLg={"2xl"} className={"mb-4 mt-1"}>
               {right_bar.heading}
-            </Heading>
-            {right_bar.questions.map((q: FaqQuestionProps) => (
-              <Question q={q.q} a={q.a} key={hashString(q.q)} />
-            ))}
-          </Col>
-        </Row>
-      </Container>
-    </Tilted>
+            </Heading> */}
+          {right_bar.questions.map((q: FaqQuestionProps) => (
+            <Question q={q.q} a={q.a} key={hashString(q.q)} />
+          ))}
+        </Col>
+      </Row>
+    </Container>
+    // </Tilted>
   );
 };
 

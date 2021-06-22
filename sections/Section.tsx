@@ -40,7 +40,7 @@ const Section = ({
           {post && post}
           {link && <Link href={link.href}>{link.label}</Link>}
           {button && (
-            <div className={"pt-3"}>
+            <div className={"pt-4"}>
               <Button {...button} />
             </div>
           )}

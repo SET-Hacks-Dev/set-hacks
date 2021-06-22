@@ -46,7 +46,7 @@ export const HOME = {
   },
   chips: [
     { icon: MapPin, label: "Virtual" },
-    { icon: Calendar, label: "August 2021", accent: true },
+    { icon: Calendar, label: "August 13-15", accent: true },
   ],
   socialMedia: [
     { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
@@ -57,27 +57,30 @@ export const HOME = {
 };
 
 export const ABOUT_1 = {
-  heading: "👉 What is *SET.Hacks()*?",
-  text:
-    "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
-  link: { label: "View SET.Hacks() 2020", href: "https://sethacks.ca/2020" },
+  heading: "👉 Kickstart your big idea at *SET.Hacks()*",
+  text: "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
+  link: {
+    label: "View 2020 Devpost submissions",
+    href: "https://set-hacks.devpost.com/",
+  },
 };
 
 export const STATS = {
   stats: [
-    { label: "hours", value: "24" },
-    { label: "first-time hackers", value: "70%" },
     { label: "hackers", value: "250+" },
+    { label: "first-time hackers", value: "70%" },
     { label: "projects", value: "50+" },
+    { label: "in prizes", value: "$16k" },
   ],
+  caption: "Statistics from SET.Hacks() 2020",
 };
 
 export const ABOUT_2 = {
   heading: "🚀 Code the Future",
-  text:
-    "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
+  text: "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
   image: "/img/graphic2.png",
   reverse: true,
+  className: "p-5",
 };
 
 export const FAQ = {
@@ -87,18 +90,15 @@ export const FAQ = {
     questions: [
       {
         q: "What is a hackathon?",
-        a:
-          "A hackathon is an innovation marathon where “hackers” work together to design and build projects. Throughout the event, you’ll also have a chance to meet other students, attend workshops, network with mentors and sponsors, and most importantly - learn new skills! Whether you’re a beginner or an expert, SET.Hacks() is a great way to show off your ideas, build up your STEM career early, and maybe even win some prizes.",
+        a: "A hackathon is an innovation marathon where “hackers” work together to design and build projects. Throughout the event, you’ll also have a chance to meet other students, attend workshops, network with mentors and sponsors, and most importantly - learn new skills! Whether you’re a beginner or an expert, SET.Hacks() is a great way to share your ideas, get a head start on your career, and maybe even win some prizes 👀",
       },
       {
         q: "Who is eligible to attend?",
-        a:
-          "SET.Hacks() 2021 is open to all high school students from anywhere in the world! High school seniors graduated in June 2021 are also welcome. We especially encourage beginners to join us!",
+        a: "SET.Hacks() 2021 is open to all high school students from anywhere in the world! High school seniors graduated in June 2021 are also welcome. We especially encourage beginners to join us!",
       },
       {
         q: "What if I’ve never coded before?",
-        a:
-          "Don’t worry, we’ll teach you! SET.Hacks() is designed to guide beginners through the whole process of building a project from start to finish. Even if you have zero technical background, we’ll help you create something you can be proud of. Get ready to learn from workshops and mentors, and walk away from this weekend with lots of new skills!",
+        a: "Don’t worry, we’ll teach you! SET.Hacks() is designed to guide beginners through the whole process of building a project from start to finish. Even if you have zero technical background, we’ll help you create something you can be proud of. Get ready to learn from mentors, workshops, and hands-on building - we promise that you'll walk away from this weekend having gained lots of new skills!",
       },
     ],
   },
@@ -107,21 +107,19 @@ export const FAQ = {
     questions: [
       {
         q: "Do I need a team to participate?",
-        a:
-          "You can apply either as an individual or a team of up to 4 people. If you would like to participate as a team but don’t have one in mind, we’ll match you up with one before the event.",
+        a: "You can apply either as an individual or a team of up to 4 people. If you would like to a team but don’t have one yet, we’ll match you up with one before the event.",
       },
       {
         q: "How much does it cost?",
-        a:
-          "Nothing! If your application is accepted, the event is completely free to attend.",
+        a: "Nothing! If your application is accepted, the event is completely free to attend.",
       },
       {
         q: "Wait, I still have a question!",
         a: (
           <>
-            Reach out to{" "}
+            Message us at{" "}
             <Link href="mailto:hello@sethacks.ca">hello@sethacks.ca</Link> and
-            we’ll be happy to help.
+            we&apos;ll get back to you!
           </>
         ),
       },
@@ -131,8 +129,7 @@ export const FAQ = {
 
 export const SPONSORS = {
   heading: "🙌 Sponsors",
-  text:
-    "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
+  text: "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
   post: (
     <TextChildren>
       <span style={{ fontWeight: 500 }}>Want to support student hackers?</span>{" "}
@@ -147,10 +144,11 @@ export const SPONSORS = {
     isLink: true,
     target: "/doc/SET.Hacks()_Sponsorship_Package.pdf",
   },
+  image: "/img/graphic3.png",
 };
 export const CONTACT = {
   heading: "📧 Still have a question?",
-  className: "d-flex align-items-center flex-column",
+  className: "d-flex align-items-left flex-column",
   post: (
     <TextChildren>
       Send us an email{" "}

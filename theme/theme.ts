@@ -2,6 +2,7 @@ const colors = {
   white: "#ffffff",
   brand: {
     100: "#cec7e7",
+    // 200: "#d4ccf8",
     200: "#eae5ff",
     300: "#8d7dc8",
     400: "#5243aa",
@@ -10,7 +11,7 @@ const colors = {
     700: "#282a87",
     800: "#221c48",
   },
-  secondary: "#fee7e9",
+  secondary: "#ddf9ff",
 };
 
 const fonts = {

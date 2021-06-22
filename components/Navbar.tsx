@@ -90,9 +90,9 @@ const HNavbar = ({ brand, links, actionButton }: NavbarProps) => {
               </StyledNavLink>
             ))}
           </Nav>
-          <div className="mt-lg-0 mt-3 mb-3 mb-lg-0">
+          {/* <div className="mt-lg-0 mt-3 mb-3 mb-lg-0">
             <Button {...actionButton} isLink={true} rightIcon={ArrowRight} />
-          </div>
+          </div> */}
         </Navbar.Collapse>
       </Container>
     </StyledNavbar>
