@@ -1,4 +1,4 @@
-import { media } from "../theme";
+import { media, theme } from "../theme";
 import render from "./render";
 import styled from "styled-components";
 
@@ -8,6 +8,7 @@ const StyledHeader = styled.h1`
   ${media.lg`font-size: ${({ theme, sizeLg }: { theme: any; sizeLg: string }) =>
     theme.fontSizes[sizeLg]}`};
   font-weight: 600;
+  font-family: ${theme.fonts.heading};
 `;
 
 type HeaderProps = {

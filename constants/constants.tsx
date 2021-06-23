@@ -63,6 +63,7 @@ export const ABOUT_1 = {
     label: "View 2020 Devpost submissions",
     href: "https://set-hacks.devpost.com/",
   },
+  dark: true
 };
 
 export const STATS = {
@@ -81,6 +82,7 @@ export const ABOUT_2 = {
   image: "/img/graphic2.png",
   reverse: true,
   className: "p-5",
+  dark: true
 };
 
 export const FAQ = {

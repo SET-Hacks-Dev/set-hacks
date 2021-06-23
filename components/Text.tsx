@@ -3,7 +3,6 @@ import { media, theme } from "../theme";
 import render from "./render";
 
 const StyledText = styled.p`
-  color: ${theme.colors.brand["800"]};
   font-size: ${theme.fontSizes.md};
   ${media.sm`font-size: ${theme.fontSizes.lg}`};
   transition: 0.4s all ease;

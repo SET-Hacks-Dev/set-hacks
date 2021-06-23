@@ -1,7 +1,7 @@
 import { Accent, Chip, Heading, SocialMedia } from "../components";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { media } from "../theme";
+import { media, theme } from "../theme";
 import { HOME } from "../constants";
 import MailingList from "./MailingList";
 import Typical from "react-typical";
@@ -16,48 +16,58 @@ const StyledContainer = styled(Container)`
   ${media.lg`height: 100vh !important`};
 `;
 
+const HeroWrapper = styled.div`
+  background-image: linear-gradient(
+    ${theme.colors.brand[200]},
+    ${theme.colors.secondary},
+    ${theme.colors.white}
+  );
+`;
+
 const Hero = () => {
   return (
-    <StyledContainer>
-      <Row style={{ height: "100%" }}>
-        <Col xs={12} lg={6} className="d-flex align-items-center">
-          <div className="w-100 d-flex justify-content-center flex-column">
-            <Heading toRender={false} sizeXs="4xl" sizeLg="5xl">
-              <Accent>
-                <Typical
-                  steps={HOME.lead.actions}
-                  loop={Infinity}
-                  wrapper="span"
-                />
-              </Accent>
-              <br />
-              {HOME.lead.content}
-            </Heading>
-            <div className="mt-3 w-100 d-flex justify-content-begin">
-              {HOME.chips.map((chip) => (
-                <Chip {...chip} key={chip.label} />
-              ))}
-            </div>
+    <HeroWrapper>
+      <StyledContainer>
+        <Row style={{ height: "100%" }}>
+          <Col xs={12} lg={6} className="d-flex align-items-center">
+            <div className="w-100 d-flex justify-content-center flex-column">
+              <Heading toRender={false} sizeXs="4xl" sizeLg="5xl">
+                <Accent>
+                  <Typical
+                    steps={HOME.lead.actions}
+                    loop={Infinity}
+                    wrapper="span"
+                  />
+                </Accent>
+                <br />
+                {HOME.lead.content}
+              </Heading>
+              <div className="mt-3 w-100 d-flex justify-content-begin">
+                {HOME.chips.map((chip) => (
+                  <Chip {...chip} key={chip.label} />
+                ))}
+              </div>
 
-            <div className="w-100 mt-4">
-              <MailingList />
+              <div className="w-100 mt-4">
+                <MailingList />
+              </div>
+              <div className="w-100 mt-5 d-flex">
+                {HOME.socialMedia.map((social) => (
+                  <SocialMedia {...social} key={social.url} />
+                ))}
+              </div>
             </div>
-            <div className="w-100 mt-5 d-flex">
-              {HOME.socialMedia.map((social) => (
-                <SocialMedia {...social} key={social.url} />
-              ))}
-            </div>
-          </div>
-        </Col>
-        <Col
-          xs={12}
-          lg={6}
-          className="d-flex align-items-center justify-content-start mt-5 mt-lg-0"
-        >
-          <Image src={HOME.image} alt="Hero" fluid />
-        </Col>
-      </Row>
-    </StyledContainer>
+          </Col>
+          <Col
+            xs={12}
+            lg={6}
+            className="d-flex align-items-center justify-content-start mt-5 mt-lg-0"
+          >
+            <Image src={HOME.image} alt="Hero" fluid />
+          </Col>
+        </Row>
+      </StyledContainer>
+    </HeroWrapper>
   );
 };
 

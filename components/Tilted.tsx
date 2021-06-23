@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../theme";
+import { media, theme } from "../theme";
 
 type StyledTiltedProps = {
   color: string;
@@ -8,6 +8,12 @@ type StyledTiltedProps = {
 };
 
 const StyledTilted = styled.div<StyledTiltedProps>`
+  background-image: linear-gradient(
+    ${theme.colors.brand[800]},
+    ${theme.colors.brand[400]},
+    ${theme.colors.secondary},
+    ${theme.colors.white}
+  );
   background-color: ${(props) => props.color};
   margin-top: 20rem;
   margin-bottom: -2.5rem;
