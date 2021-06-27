@@ -93,16 +93,25 @@ const Dot = styled.button`
   cursor: pointer;
 `;
 
+const StoryContainer = styled(Container)`
+  ${media.lg`max-width: 100%; padding: 0; margin: 0;`};
+`;
+
 const Stories = ({ stories, heading }: StoriesProps) => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     loop: true,
-    // TODO - check media size and make slides per view = 1 for mobile
     slidesPerView: 2,
     mode: "free-snap",
     spacing: 36,
     centered: true,
+    breakpoints: {
+      // TODO - change hardcoded value to theme.breakpoints.lg
+      "(max-width: 992px)": {
+        slidesPerView: 1,
+      },
+    },
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
     },
@@ -116,66 +125,70 @@ const Stories = ({ stories, heading }: StoriesProps) => {
           </Col>
         </Row>
       </Container>
-      <div ref={sliderRef} className="keen-slider">
-        {stories.map((story: StoryProps) => (
-          <StoryCard key={story.name} className="keen-slider__slide p-5 mb-2">
-            <Row className={"my-auto pb-sm-5"}>
-              <Col sm={12} md={4} className={"text-center my-auto"}>
-                <HexHeadshot
-                  alt={"Hacker Stories - " + story.name}
-                  src={"img/headshots/" + story.headshot}
-                />
-                <Name className="mt-4">{story.name}</Name>
-                <School>{story.school}</School>
-              </Col>
-              <Col sm={12} md={8} className={"my-auto"}>
-                <div className="ms-md-4 ms-lg-4 ms-xl-4">
-                  <Quote className="pb-3">{story.quote}</Quote>
-                  <Link href={story.link}>
-                    {story.name.split(" ")[0]}&apos;s project: {story.project}
-                  </Link>
-                </div>
-              </Col>
-            </Row>
-          </StoryCard>
-        ))}
-      </div>
-      {slider && (
-        <Row>
-          <div className="d-flex justify-content-center">
-            <Arrow
-              onClick={(e) => {
-                e.stopPropagation();
-                slider.prev();
-              }}
-              src="assets/left.png"
-            />
-            <Arrow src="assets/center.png" />
-            <Arrow
-              onClick={(e) => {
-                e.stopPropagation();
-                slider.next();
-              }}
-              src="assets/right.png"
-            />
-          </div>
-          <div className="d-flex justify-content-center">
-            {Array.from(Array(slider.details().size).keys()).map((idx) => {
-              return (
-                <>
-                  <Dot
-                    key={idx}
-                    onClick={() => {
-                      slider.moveToSlideRelative(idx);
-                    }}
-                    className={currentSlide === idx ? "" : "opacity-2"}
+      <StoryContainer>
+        <div ref={sliderRef} className="keen-slider">
+          {stories.map((story: StoryProps) => (
+            <StoryCard key={story.name} className="keen-slider__slide p-5 mb-2">
+              <Row className={"my-auto pb-sm-5"}>
+                <Col sm={12} md={4} className={"text-center my-auto"}>
+                  <HexHeadshot
+                    alt={"Hacker Stories - " + story.name}
+                    src={"img/headshots/" + story.headshot}
                   />
-                </>
-              );
-            })}
-          </div>
-        </Row>
-      )}
+                  <Name className="mt-4">{story.name}</Name>
+                  <School>{story.school}</School>
+                </Col>
+                <Col sm={12} md={8} className={"my-auto"}>
+                  <div className="ms-md-4 ms-lg-4 ms-xl-4">
+                    <Quote className="pb-3 pt-4 pt-md-0 pt-lg-0 pt-xl-0 ">
+                      {story.quote}
+                    </Quote>
+                    <Link href={story.link}>
+                      {story.name.split(" ")[0]}&apos;s project: {story.project}
+                    </Link>
+                  </div>
+                </Col>
+              </Row>
+            </StoryCard>
+          ))}
+        </div>
+        {slider && (
+          <Row>
+            <div className="d-flex justify-content-center">
+              <Arrow
+                onClick={(e) => {
+                  e.stopPropagation();
+                  slider.prev();
+                }}
+                src="assets/left.png"
+              />
+              <Arrow src="assets/center.png" />
+              <Arrow
+                onClick={(e) => {
+                  e.stopPropagation();
+                  slider.next();
+                }}
+                src="assets/right.png"
+              />
+            </div>
+            <div className="d-flex justify-content-center">
+              {Array.from(Array(slider.details().size).keys()).map((idx) => {
+                return (
+                  <>
+                    <Dot
+                      key={idx}
+                      onClick={() => {
+                        slider.moveToSlideRelative(idx);
+                      }}
+                      className={currentSlide === idx ? "" : "opacity-2"}
+                    />
+                  </>
+                );
+              })}
+            </div>
+          </Row>
+        )}
+      </StoryContainer>
     </>
   );
 };
