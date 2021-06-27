@@ -6,6 +6,7 @@ import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Heading } from "../components";
+import Link from "../components/Link";
 
 type StoryProps = {
   name: string;
@@ -23,7 +24,7 @@ type StoriesProps = {
 
 const StoryCard = styled.div`
   background-color: ${theme.colors.white};
-  border-radius: ${theme.borderRadius.md};
+  border-radius: ${theme.borderRadius["2xl"]};
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 5px ${rgba(theme.colors.brand[800], 0.2)};
@@ -128,7 +129,12 @@ const Stories = ({ stories, heading }: StoriesProps) => {
                 <School>{story.school}</School>
               </Col>
               <Col sm={12} md={8} className={"my-auto"}>
-                <Quote className="ms-md-4 ms-lg-4 ms-xl-4">{story.quote}</Quote>
+                <div className="ms-md-4 ms-lg-4 ms-xl-4">
+                  <Quote className="pb-3">{story.quote}</Quote>
+                  <Link href={story.link}>
+                    {story.name.split(" ")[0]}&apos;s project: {story.project}
+                  </Link>
+                </div>
               </Col>
             </Row>
           </StoryCard>
