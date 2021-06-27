@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rgba } from "polished";
 import { media, theme } from "../theme";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import React from "react";
+import React, { LegacyRef, useRef } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Heading } from "../components";
@@ -95,7 +95,7 @@ const Dot = styled.button`
 
 const Stories = ({ stories, heading }: StoriesProps) => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [sliderRef, slider] = useKeenSlider({
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     loop: true,
     // TODO - check media size and make slides per view = 1 for mobile
@@ -144,17 +144,23 @@ const Stories = ({ stories, heading }: StoriesProps) => {
         <Row>
           <div className="d-flex justify-content-center">
             <Arrow
-              onClick={(e) => e.stopPropagation() || slider.prev()}
+              onClick={(e) => {
+                e.stopPropagation();
+                slider.prev();
+              }}
               src="assets/left.png"
             />
             <Arrow src="assets/center.png" />
             <Arrow
-              onClick={(e) => e.stopPropagation() || slider.next()}
+              onClick={(e) => {
+                e.stopPropagation();
+                slider.next();
+              }}
               src="assets/right.png"
             />
           </div>
           <div className="d-flex justify-content-center">
-            {[...Array(slider.details().size).keys()].map((idx) => {
+            {Array.from(Array(slider.details().size).keys()).map((idx) => {
               return (
                 <>
                   <Dot
