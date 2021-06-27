@@ -7,5 +7,8 @@ export * from "./Hero";
 export { default as MailingList } from "./MailingList";
 export * from "./MailingList";
 
+export { default as Stories } from "./Stories";
+export * from "./Stories";
+
 export { default as Section } from "./Section";
 export * from "./Section";

@@ -7,9 +7,10 @@ import {
   NAVIGATION,
   SPONSORS,
   STATS,
+  STORIES
 } from "../constants";
 import { Anchor, Footer, Navbar, Spacer, Stats, Tilted } from "../components";
-import { Faq, Hero, MailingList, Section } from "../sections";
+import { Faq, Hero, MailingList, Section, Stories } from "../sections";
 
 const Index = () => {
   return (
@@ -20,8 +21,9 @@ const Index = () => {
         <Anchor i="about" />
         <Section {...ABOUT_1} />
         <Stats {...STATS} />
-        {/* <Section {...ABOUT_2} post={<MailingList />} /> */}
         <Section {...ABOUT_2} />
+        <Spacer sz={14} />
+        <Stories {...STORIES} />
         <Spacer sz={14} />
         <Anchor i="faq" />
         <Faq {...FAQ} />

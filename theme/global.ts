@@ -36,6 +36,11 @@ const GlobalStyle = createGlobalStyle`
   #root {
     min-height: 100vh;
   }
+
+  .opacity-2 {
+    opacity: 40%;
+  }
+
 `;
 
 export default GlobalStyle;
