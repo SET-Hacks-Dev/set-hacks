@@ -17,15 +17,13 @@ const StyledTilted = styled.div<StyledTiltedProps>`
   background-color: ${(props) => props.color};
   margin-bottom: -2.5rem;
   padding: 8em 0;
-  transform: skewY(-${({ skewDeg }: { skewDeg: number }) =>
-    skewDeg}deg);
+  transform: skewY(-${({ skewDeg }: { skewDeg: number }) => skewDeg}deg);
   transition: 0.4s all ease-in-out;
   width: 100%;
   z-index: -1;
-  ${media.lg`padding: 15em 0 0 0`};
-  ${media.lg`transform: skewY(-${({ skewDeg }) => skewDeg}deg) translateY(-20em)`};
-  ${media.xl`padding: 25em 0 0 0`};
-  ${media.xl`transform: skewY(-${({ skewDeg }) => skewDeg}deg) translateY(-10em)`};
+  ${media.lg`padding: 30vh 0 0 0`};
+  ${media.lg`transform: skewY(-${({ skewDeg }) =>
+    skewDeg}deg) translateY(-30vh)`};
 
   & > * {
     transform: skewY(${({ skewDeg }) => skewDeg}deg);

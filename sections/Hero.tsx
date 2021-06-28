@@ -9,7 +9,6 @@ import Typical from "react-typical";
 const StyledContainer = styled(Container)`
   padding-top: 15vh;
   padding-bottom: 15vh;
-  margin-bottom: 5rem;
   min-height: 70vh;
   position: relative;
   z-index: 999;
@@ -20,10 +19,9 @@ const StyledContainer = styled(Container)`
 
 const Rocket = styled(Image)`
   display: none;
+  max-height: 90vh;
   ${media.lg`display: block`};
 `;
-
-const HeroWrapper = styled.div``;
 
 const Hero = () => {
   return (
@@ -32,7 +30,7 @@ const Hero = () => {
         <Col
           xs={12}
           lg={6}
-          className="d-flex align-items-center justify-content-start"
+          className="d-flex align-items-center justify-content-end"
         >
           <Rocket src={HOME.image} alt="Hero" fluid />
         </Col>

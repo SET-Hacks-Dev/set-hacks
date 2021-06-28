@@ -2,7 +2,7 @@ import { renderIcon } from "./render";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: ${({ theme }) => theme.colors.brand[200]};
   border-radius: ${({ theme }) => theme.borderRadius.sm};
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.35);
+    opacity: 0.8;
   }
 `;
 
