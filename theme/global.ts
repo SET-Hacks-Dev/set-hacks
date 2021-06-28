@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background-image: linear-gradient(${theme.colors.brand[200]}, ${
+  theme.colors.brand[200]
+}, transparent);
+    background-repeat:no-repeat;
+    background-size: 100% 70vh;
     background-color: ${theme.colors.white};
     color: ${theme.colors.brand[800]};
     font-family: ${theme.fonts.sans};
