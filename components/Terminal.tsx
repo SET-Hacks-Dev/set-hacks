@@ -175,7 +175,7 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
   React.useEffect(() => {
     let id = terminalHistory[terminalHistory.length - 1].id;
     let el = document.getElementById(id + "-input");
-    if (el) {
+    if (terminalHistory.length !== 1 && el) {
       window.setTimeout(() => {
         el.focus();
       }, 0);
