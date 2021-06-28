@@ -12,6 +12,7 @@ const StyledFrame = styled(Col)`
   );
   border-radius: ${({ theme }) => theme.borderRadius["2xl"]};
   padding: 0.8rem;
+  max-width: 850px;
 `;
 
 const StyledTerminal = styled.div`
@@ -181,7 +182,7 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
 
   return (
     <Container>
-      <Row>
+      <Row className="justify-content-center">
         <StyledFrame className="mb-4">
           <StyledTerminal>
             <div className="w-100 d-flex justify-content-center align-items-center mb-3">
@@ -207,8 +208,8 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
           </StyledTerminal>
         </StyledFrame>
       </Row>
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col style={{ maxWidth: 850 }}>
           <Link href={link.href}>{link.label}</Link>
         </Col>
       </Row>
