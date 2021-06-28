@@ -40,6 +40,9 @@ export * from "./Spacer";
 export { default as Stats } from "./Stats";
 export * from "./Stats";
 
+export { default as Terminal } from "./Terminal";
+export * from "./Terminal";
+
 export { default as Text } from "./Text";
 export * from "./Text";
 
