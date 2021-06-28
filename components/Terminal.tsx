@@ -100,6 +100,7 @@ const Prompt = ({ active, val, submitCommand, id }: PromptProps) => {
           onChange={handleChange}
           disabled={disabled}
           value={command}
+          id={id + "-input"}
         />
         <button type="submit" hidden={true}></button>
       </StyledForm>
@@ -173,10 +174,11 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
 
   React.useEffect(() => {
     let id = terminalHistory[terminalHistory.length - 1].id;
-    let el = document.getElementById(id);
+    let el = document.getElementById(id + "-input");
     if (el) {
-      el.scrollIntoView();
-      document.getElementById("t-hist").scrollIntoView();
+      window.setTimeout(() => {
+        el.focus();
+      }, 0);
     }
   });
 
