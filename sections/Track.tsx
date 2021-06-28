@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Col, Container, Row, Image, Card } from "react-bootstrap";
 import { Heading, Text } from "../components";
 import styled from "styled-components";
-import { media, theme } from "../theme";
+import { media } from "../theme";
 
 type TrackProps = {
   heading: string;
@@ -39,6 +39,39 @@ const LargeIcon = styled(Image)`
   ${media.lg`display: block`};
 `;
 
+const TrackCard = styled(Card)`
+  border-radius: 15px;
+  min-height: 500px;
+  padding: 50px;
+  ${media.lg`padding-left: 150px`};
+`;
+
+const Buttons = styled(Text)`
+  font-weight: bold;
+  font-size: 110%;
+  ${media.lg`font-size: 140%`};
+`;
+
+const Icons = styled(Col)`
+  opacity: ${(props) => props.active ? 1 : 0.3};
+  cursor: pointer;
+  ${media.lg`transform: ${(props) => props.active ? "scale(1.1)" : "scale(0.9)"}`};
+  ${media.lg`transition: .4s transform cubic-bezier(.155,1.105,.295,1.12)`};
+  ${(props) => !props.active && `
+    &:hover {
+      opacity: 0.8;
+      transform: translate(0%, -3%);
+      transition: 0.2s ease-out;
+    }
+  `}
+`;
+
+const IconsText = styled(Text)`
+  font-size: 80%;
+  ${media.lg`font-size: 120%`};
+  ${media.lg`font-weight: bold`};
+`;
+
 const Track = ({
   heading,
   text,
@@ -53,7 +86,7 @@ const Track = ({
   return (
     <>
       <TrackWrapper dark={dark ? 1 : 0}>
-        <Row className="row justify-content-md-center mb-5" >
+        <Row className="row justify-content-md-center mb-4">
           <Col xs={12} lg={6} className="text-center mb-4" style={{ maxWidth }}>
             <Heading className="mb-4">{heading}</Heading>
             {text && text.map(line => {
@@ -66,10 +99,10 @@ const Track = ({
         <Row className="row justify-content-md-center mb-5">
           {tracks && tracks.map(track => {
             return (
-              <Col xs={4} lg={2} style={{ maxWidth, opacity: track.id === activeTrack ? 1 : 0.3 }} key={track.id}>
+              <Icons xs={4} lg={2} style={{ maxWidth }} key={track.id} active={track.id === activeTrack ? 1 : 0} onClick={()=>setActiveTrack(track.id)}>
                 <Image src={track.icon} alt={track.title} fluid />
-                <Text className="text-center mb-4" text={track.title} style={{fontWeight: "bold", cursor:"pointer"}} onClick={()=>setActiveTrack(track.id)}/>
-              </Col>
+                <IconsText className="text-center mb-4" text={track.title}/>
+              </Icons>
             )
           })}
         </Row>
@@ -79,26 +112,26 @@ const Track = ({
           <Col xs={0} lg={3}/>
           <Col xs={12} lg={9}>
             <LargeIcon src={tracks[activeTrack].icon} alt={tracks[activeTrack].title} fluid/>
-            <Card style={{borderRadius: "15px", minHeight:"500px", padding: "50px", paddingLeft: "100px"}} >
-              <Text className="mb-4" text={tracks[activeTrack].title} style={{fontWeight: "bold", fontSize: "180%"}}/>
-              <Text className="mb-4" text={tracks[activeTrack].info} style={{fontSize: "120%"}}/>
+            <TrackCard>
+              <Text className="mb-4" text={tracks[activeTrack].title} style={{ fontWeight: "bold", fontSize: "180%" }}/>
+              <Text className="mb-4" text={tracks[activeTrack].info} style={{ fontSize: "120%" }}/>
               <Row className="mt-auto">
                 <Col xs={12} lg={6}>
                   {activeTrack - 1 >= 0 && (
                     <div className="btn p-0" onClick={()=>setActiveTrack(activeTrack - 1)}>
-                      <Text text={"← " + tracks[activeTrack - 1].title} style={{fontWeight: "bold", fontSize: "120%"}}/>
+                      <Buttons text={"← " + tracks[activeTrack - 1].title}/>
                     </div>
                   )}
                 </Col>
                 <Col xs={12} lg={6}>
                   {activeTrack + 1 < length && (
-                    <div className="btn p-0" onClick={()=>setActiveTrack(activeTrack + 1)} style={{float: "right"}}>
-                      <Text text={tracks[activeTrack + 1].title  + " →"} style={{fontWeight: "bold", fontSize: "120%"}}/>
+                    <div className="btn p-0" onClick={()=>setActiveTrack(activeTrack + 1)} style={{ float: "right" }}>
+                      <Buttons text={tracks[activeTrack + 1].title  + " →"}/>
                     </div>
                   )}
                 </Col>
               </Row>
-            </Card>
+            </TrackCard>
           </Col>
         </Row>
       </TrackWrapper>
