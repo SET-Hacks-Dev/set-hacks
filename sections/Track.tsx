@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Col, Container, Row, Image, Card } from "react-bootstrap";
 import { Heading, Text } from "../components";
 import styled from "styled-components";
+import { media, theme } from "../theme";
 
 type TrackProps = {
   heading: string;
@@ -25,6 +26,17 @@ const TrackWrapper = styled(Container)`
         ? props.theme.colors.white
         : props.theme.colors.brand[800]} !important;
   }
+`;
+
+const LargeIcon = styled(Image)`
+  position: absolute;
+  display: none;
+  height: 500px;
+  max-height: 35vw;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  ${media.lg`display: block`};
 `;
 
 const Track = ({
@@ -64,9 +76,9 @@ const Track = ({
       </TrackWrapper>
       <TrackWrapper>
         <Row>
-          <Col xs={5} lg={3}/>
-          <Col xs={7} lg={9}>
-            <Image src={tracks[activeTrack].icon} alt={tracks[activeTrack].title} fluid style={{ position: "absolute", height:520, maxHeight:"22vw", minHeight:400, left:0, top:0, zIndex: 500}}/>
+          <Col xs={0} lg={3}/>
+          <Col xs={12} lg={9}>
+            <LargeIcon src={tracks[activeTrack].icon} alt={tracks[activeTrack].title} fluid/>
             <Card style={{borderRadius: "15px", minHeight:"500px", padding: "50px", paddingLeft: "100px"}} >
               <Text className="mb-4" text={tracks[activeTrack].title} style={{fontWeight: "bold", fontSize: "180%"}}/>
               <Text className="mb-4" text={tracks[activeTrack].info} style={{fontSize: "120%"}}/>
