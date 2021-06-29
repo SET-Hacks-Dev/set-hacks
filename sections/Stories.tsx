@@ -91,6 +91,11 @@ const Dot = styled.button`
   padding: 5px;
   margin: 0 5px;
   cursor: pointer;
+  opacity: 40%;
+
+  &.active {
+    opacity: 100%;
+  }
 `;
 
 const StoryContainer = styled(Container)`
@@ -180,7 +185,7 @@ const Stories = ({ stories, heading }: StoriesProps) => {
                       onClick={() => {
                         slider.moveToSlideRelative(idx);
                       }}
-                      className={currentSlide === idx ? "" : "opacity-2"}
+                      className={currentSlide === idx ? "active" : ""}
                     />
                   </>
                 );
