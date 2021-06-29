@@ -7,7 +7,6 @@ import {
   MapPin,
 } from "react-feather";
 import { Link, TextChildren } from "../components";
-
 import { theme } from "../theme";
 
 const Devpost = ({ size }: { size: number }) => (
@@ -156,6 +155,20 @@ export const EXPLORE_TERMINAL = {
   ],
   link: { label: "View full schedule", href: "#" },
 };
+
+export const TRACK = {
+  heading: "get on track",
+  text: ["August 9-11","Our six custom learning tracks, workshops and challenges help you truly understand major topics in tech, and prepare you to apply them to solve complex, interdisciplinary problems in the future.", "Each learning track has three, hour-long workshops, and one post-workshop do-it-yourself coding challenge."],
+  tracks: [
+    {id: 0, title: "Python", icon: "img/PythonIcon.svg", info: "yes we have some good info here mmhmm"},
+    {id: 1, title: "Web Development", icon: "img/LaptopIcon.svg", info: "yes we have some good info here mmhmm"},
+    {id: 2, title: "App Development", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
+    {id: 3, title: "Machine Learning", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
+    {id: 4, title: "Cloud Computing & APIs", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
+    {id: 5, title: "Design", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
+  ],
+  dark: true
+}
 
 export const FAQ = {
   heading: "💡 Frequently Asked Questions",
