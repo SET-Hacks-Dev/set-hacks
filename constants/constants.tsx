@@ -63,7 +63,7 @@ export const ABOUT_1 = {
     label: "View 2020 Devpost submissions",
     href: "https://set-hacks.devpost.com/",
   },
-  dark: true
+  dark: true,
 };
 
 export const STATS = {
@@ -82,7 +82,36 @@ export const ABOUT_2 = {
   image: "/img/graphic2.png",
   reverse: true,
   className: "p-5",
-  dark: true
+  dark: true,
+};
+
+export const EXPLORE_TERMINAL = {
+  heading: "💫 Explore Your Experience",
+  commands: [
+    {
+      name: "ls",
+      value: `./entertainment
+      ./interactive
+      ./fireside-chats
+      `,
+    },
+    {
+      name: "./entertainment",
+      value:
+        "Feeling tired and need a break from hacking? Join us in the evenings of August 13-14 for some fun activities including Minecraft, Drawphone, Midnight Ramen and many more! Bond with friends, make new ones, and enjoy!",
+    },
+    {
+      name: "./interactive",
+      value:
+        "We all know how hard it is to meet new friends and mentors virtually. In the afternoon of August 13-14 we have a series of events planned to help you meet students from your dream universities and careers! We will be hosting resume roasts, mock interviews and networking opportunities tailored just for you.",
+    },
+    {
+      name: "./fireside-chats",
+      value:
+        "Learn through others’ past experiences and regrets! You will have the opportunity to ask burning questions at an Ivy league panel, high school regrets panel to help you avoid them and industry professionals panel from your dream companies.",
+    },
+  ],
+  link: { label: "View full schedule", href: "#" },
 };
 
 export const FAQ = {
