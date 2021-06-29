@@ -2,6 +2,7 @@ import {
   ABOUT_1,
   ABOUT_2,
   CONTACT,
+  EXPLORE_TERMINAL,
   FAQ,
   FOOTER,
   NAVIGATION,
@@ -9,7 +10,15 @@ import {
   STATS,
   STORIES
 } from "../constants";
-import { Anchor, Footer, Navbar, Spacer, Stats, Tilted } from "../components";
+import {
+  Anchor,
+  Footer,
+  Navbar,
+  Spacer,
+  Stats,
+  Terminal,
+  Tilted,
+} from "../components";
 import { Faq, Hero, MailingList, Section, Stories } from "../sections";
 
 const Index = () => {
@@ -22,6 +31,9 @@ const Index = () => {
         <Section {...ABOUT_1} />
         <Stats {...STATS} />
         <Section {...ABOUT_2} />
+        <Anchor i="t-hist" />
+        <Spacer sz={8} />
+        <Terminal {...EXPLORE_TERMINAL} />
         <Spacer sz={14} />
         <Stories {...STORIES} />
         <Spacer sz={14} />
