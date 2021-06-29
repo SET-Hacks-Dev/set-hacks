@@ -19,7 +19,7 @@ const StyledContainer = styled(Container)`
 const HeroWrapper = styled.div`
   background-image: linear-gradient(
     ${theme.colors.brand[200]},
-    ${theme.colors.secondary},
+    ${theme.colors.brand[200]},
     ${theme.colors.white}
   );
 `;

@@ -8,6 +8,7 @@ import {
   NAVIGATION,
   SPONSORS,
   STATS,
+  STORIES,
   TRACK,
 } from "../constants";
 import {
@@ -19,7 +20,7 @@ import {
   Terminal,
   Tilted,
 } from "../components";
-import { Faq, Hero, MailingList, Section, Track } from "../sections";
+import { Faq, Hero, MailingList, Section, Track, Stories } from "../sections";
 
 const Index = () => {
   return (
@@ -29,15 +30,16 @@ const Index = () => {
       <Tilted>
         <Anchor i="about" />
         <Section {...ABOUT_1} />
+        <Section {...ABOUT_2} />
         <Stats {...STATS} />
-        {/* <Section {...ABOUT_2} post={<MailingList />} /> */}
         <Anchor i="track" />
         <Track {...TRACK} />
         <Spacer sz={14} />
-        <Section {...ABOUT_2} />
         <Anchor i="t-hist" />
         <Spacer sz={8} />
         <Terminal {...EXPLORE_TERMINAL} />
+        <Spacer sz={14} />
+        <Stories {...STORIES} />
         <Spacer sz={14} />
         <Anchor i="faq" />
         <Faq {...FAQ} />

@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     min-height: 100vh;
   }
+
 `;
 
 export default GlobalStyle;

@@ -84,6 +84,49 @@ export const ABOUT_2 = {
   dark: true,
 };
 
+export const STORIES = {
+  heading: "🎤 Hear from 2020 hackers",
+  stories: [
+    {
+      name: "Sharon Peng",
+      school: "Western University",
+      project: "Style Sustainably",
+      link: "https://devpost.com/software/style-sustainably",
+      quote:
+        "SET.Hacks() was my very first hackathon! Being in high school and having little to no programming experience, the hackathon was a great opportunity to learn and build my first simple project.  Although taking on a new challenge can be scary, I loved the encouraging and welcoming community that SET.Hacks() fostered.",
+      headshot: "sharon.png",
+    },
+    {
+      name: "Eshwara Chock",
+      school: "Grade 12",
+      project: "Supplant",
+      link: "https://devpost.com/software/supplant",
+      quote:
+        "As my first hackathon experience, SET.Hacks() was amazing! In spite of being online, the SET team organized the hackathon exceptionally well and made it as easy as possible for my peers and I to compete as first time hackers. Overall, SET.Hacks() gave me the unique opportunity to explore a plethora of STEM opportunities and meet many new like-minded individuals.",
+      headshot: "eshwara.png",
+    },
+    {
+      name: "Jerry Cheng",
+      school: "University of Waterloo",
+      project: "Espere",
+      link: "https://devpost.com/software/espere",
+      quote:
+        "SET.Hacks() was a really fun and rewarding experience! I got to learn new skills and use different tools while building my project, as well as participating in the many workshops they offer.",
+      // TODO - get an image for jerry
+      headshot: "placeholder.png",
+    },
+    {
+      name: "Vansh Sethi",
+      school: "Grade 11",
+      project: "Supplant",
+      link: "https://devpost.com/software/supplant",
+      quote:
+        "SET.Hacks() was an amazing experience to work with others and learn new technical skills. The addition of resources provided by the SET team allowed myself to work with technologies I hadn't used before. They gave great mentorship during the competition and helped with any issues I had during it. Thank you for the great experience.",
+      headshot: "vansh.png",
+    },
+  ],
+};
+
 export const EXPLORE_TERMINAL = {
   heading: "💫 Explore Your Experience",
   commands: [
