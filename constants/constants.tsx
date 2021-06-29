@@ -52,7 +52,7 @@ export const HOME = {
     { icon: Instagram, url: "https://www.instagram.com/set.ottawa/" },
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
-  image: "/img/graphic1.png",
+  image: "/img/rocket.png",
 };
 
 export const ABOUT_1 = {
