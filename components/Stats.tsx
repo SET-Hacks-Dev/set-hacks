@@ -63,6 +63,7 @@ const Value = styled.h2`
   font-size: 50px;
   ${media.lg`font-size: 75px`};
   font-weight: 600;
+  font-family: ${theme.fonts.heading};
 `;
 
 const Label = styled.p`

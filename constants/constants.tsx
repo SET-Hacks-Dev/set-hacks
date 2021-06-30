@@ -59,6 +59,7 @@ export const HOME = {
 export const ABOUT_1 = {
   heading: "👉 Kickstart your big idea at *SET.Hacks()*",
   text: "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
+  image: "/assets/puzzle.png",
   link: {
     label: "View 2020 Devpost submissions →",
     href: "https://set-hacks.devpost.com/",
@@ -79,7 +80,7 @@ export const STATS = {
 export const ABOUT_2 = {
   heading: "🚀 Code the Future",
   text: "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
-  image: "/img/graphic2.png",
+  image: "/assets/spaceship.png",
   reverse: true,
   className: "p-5",
   dark: true,
