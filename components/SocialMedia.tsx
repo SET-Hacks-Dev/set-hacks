@@ -2,12 +2,12 @@ import { renderIcon } from "./render";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.brand[200]};
+  background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: ${({ theme }) => theme.borderRadius.sm};
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.colors.brand[400]};
+  color: ${({ theme }) => theme.colors.secondaryVariant};
   height: 50px;
   width: 50px;
   margin-right: 1.2rem;

@@ -20,7 +20,7 @@ import {
   Terminal,
   Tilted,
 } from "../components";
-import { Faq, Hero, MailingList, Section, Track, Stories } from "../sections";
+import { Faq, Hero, Section, Track, Stories } from "../sections";
 
 const Index = () => {
   return (
@@ -30,22 +30,24 @@ const Index = () => {
       <Tilted>
         <Anchor i="about" />
         <Section {...ABOUT_1} />
-        <Section {...ABOUT_2} />
         <Stats {...STATS} />
+        <Section {...ABOUT_2} />
         <Anchor i="track" />
+        <Spacer sz={14} />
         <Track {...TRACK} />
         <Spacer sz={14} />
         <Anchor i="t-hist" />
         <Spacer sz={8} />
         <Terminal {...EXPLORE_TERMINAL} />
         <Spacer sz={14} />
+        <Anchor i="stories" />
         <Stories {...STORIES} />
+        <Spacer sz={4} />
+        <Anchor i="sponsors" />
+        <Section {...SPONSORS} />        
         <Spacer sz={14} />
         <Anchor i="faq" />
         <Faq {...FAQ} />
-        <Spacer sz={4} />
-        <Anchor i="sponsors" />
-        <Section {...SPONSORS} />
         <Anchor i="contact" />
         <Spacer sz={14} />
         <Section {...CONTACT} />

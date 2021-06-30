@@ -18,11 +18,11 @@ const Devpost = ({ size }: { size: number }) => (
   >
     <path
       d="m48.7 4.8h-33.4l-15.3 27.2 15.7 27.2h33.1l15.2-27.2z"
-      fill={theme.colors.brand[400]}
+      fill={theme.colors.secondaryVariant}
     />
     <path
       d="m32.2 16.9h-10.8v30.3h10.8c8.2 0 14.9-6.8 14.9-15.1s-6.6-15.2-14.9-15.2zm-.2 24.2h-4.5v-18.2h4.5c5 0 9.1 4.1 9.1 9.1s-4.1 9.1-9.1 9.1z"
-      fill="#fff"
+      fill={theme.colors.secondary}
     />
   </svg>
 );
@@ -31,8 +31,9 @@ export const NAVIGATION = {
   brand: "SET*.Hacks()*",
   links: [
     { label: "About", href: "#about" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Stories", href: "#stories" },
     { label: "Sponsors", href: "#sponsors" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ],
   actionButton: { label: "Apply now", target: "" },
@@ -59,7 +60,7 @@ export const ABOUT_1 = {
   heading: "👉 Kickstart your big idea at *SET.Hacks()*",
   text: "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
   link: {
-    label: "View 2020 Devpost submissions",
+    label: "View 2020 Devpost submissions →",
     href: "https://set-hacks.devpost.com/",
   },
   dark: true,
@@ -85,7 +86,7 @@ export const ABOUT_2 = {
 };
 
 export const STORIES = {
-  heading: "🎤 Hear from 2020 hackers",
+  heading: "📚 Join our community",
   stories: [
     {
       name: "Sharon Peng",
@@ -153,19 +154,19 @@ export const EXPLORE_TERMINAL = {
         "Learn through others’ past experiences and regrets! You will have the opportunity to ask burning questions at an Ivy league panel, high school regrets panel to help you avoid them and industry professionals panel from your dream companies.",
     },
   ],
-  link: { label: "View full schedule", href: "#" },
+  link: { label: "View full schedule →", href: "#" },
 };
 
 export const TRACK = {
-  heading: "get on track",
-  text: ["August 9-11","Our six custom learning tracks, workshops and challenges help you truly understand major topics in tech, and prepare you to apply them to solve complex, interdisciplinary problems in the future.", "Each learning track has three, hour-long workshops, and one post-workshop do-it-yourself coding challenge."],
+  heading: "🚊 Get on Track",
+  text: ["Pre-hackathon | August 9-11","Our six custom learning tracks, workshops and challenges help you truly understand major topics in tech, and prepare you to apply them to solve complex, interdisciplinary problems in the future.", "Each learning track has three, hour-long workshops, and one post-workshop do-it-yourself coding challenge."],
   tracks: [
-    {id: 0, title: "Python", icon: "img/PythonIcon.svg", info: "yes we have some good info here mmhmm"},
-    {id: 1, title: "Web Development", icon: "img/LaptopIcon.svg", info: "yes we have some good info here mmhmm"},
-    {id: 2, title: "App Development", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
-    {id: 3, title: "Machine Learning", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
-    {id: 4, title: "Cloud Computing & APIs", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
-    {id: 5, title: "Design", icon: "img/GearIcon.svg", info: "yes we have some good info here mmhmm"},
+    {id: 0, title: "Python", icon: "img/PythonIcon.svg", info: "We start off with the basics of Python, from syntax and data types, to variables, loops, and functions. We then dive into more complex operations with useful applications, such as data analysis using python libraries - ultimately enabling you to harness the power of Python to turn your ideas from imagination to reality."},
+    {id: 1, title: "Web Development", icon: "img/LaptopIcon.svg", info: "Our web development track introduces the fundamentals of HTML, CSS, and JavaScript, then combines them together to create a functional, interactive website. We then teach you how to incorporate more sophisticated frameworks such as React, Bootstrap, and Node.js to help you create dynamic, mobile-friendly websites with vastly expanded capabilities."},
+    {id: 2, title: "App Development", icon: "img/GearIcon.svg", info: "We will walk you through building iOS and Android apps using Flutter, a cross-platform app design tool. By the end of this track, you will go from beginner to having coded your first basic app."},
+    {id: 3, title: "Machine Learning", icon: "img/GearIcon.svg", info: "Our machine learning (ML) track breaks down the fundamentals of ML, covering the different types of ML, how neural networks really work, and their various architectures. Next, we present a comprehensive tutorial of Tensorflow and Keras that lets you create and apply diverse machine learning models to real-life datasets and problems."},
+    {id: 4, title: "Cloud Computing & APIs", icon: "img/GearIcon.svg", info: "We begin by briefly introducing how API frameworks and cloud computing architectures work, followed by an in-depth tutorial of how to use Microsoft Azure for cloud computing and storage. We finish off by teaching you how to use and apply popular APIs, as well as create your very own API."},
+    {id: 5, title: "Design", icon: "img/GearIcon.svg", info: "Making your applications clean and elegant is just as important as making them functional. Our design workshop teaches you all you need to know about designing appealing user interfaces that are captivating and strategies to create an engaging user experience."},
   ],
   dark: true
 }
