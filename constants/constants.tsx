@@ -105,7 +105,7 @@ export const STORIES = {
       link: "https://devpost.com/software/supplant",
       quote:
         "As my first hackathon experience, SET.Hacks() was amazing! In spite of being online, the SET team organized the hackathon exceptionally well and made it as easy as possible for my peers and I to compete as first time hackers. Overall, SET.Hacks() gave me the unique opportunity to explore a plethora of STEM opportunities and meet many new like-minded individuals.",
-      headshot: "eshwara.png",
+      headshot: "eshwara-2.png",
     },
     {
       name: "Jerry Cheng",
@@ -115,7 +115,7 @@ export const STORIES = {
       quote:
         "SET.Hacks() was a really fun and rewarding experience! I got to learn new skills and use different tools while building my project, as well as participating in the many workshops they offer.",
       // TODO - get an image for jerry
-      headshot: "placeholder.png",
+      headshot: "jerry.png",
     },
     {
       name: "Vansh Sethi",

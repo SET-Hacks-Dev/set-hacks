@@ -20,7 +20,7 @@ import {
   Terminal,
   Tilted,
 } from "../components";
-import { Faq, Hero, Section, Track, Stories } from "../sections";
+import { Faq, Hero, Section, Track, Stories, About1, About2 } from "../sections";
 
 const Index = () => {
   return (
@@ -29,11 +29,11 @@ const Index = () => {
       <Hero />
       <Tilted>
         <Anchor i="about" />
-        <Section {...ABOUT_1} />
+        <About1 {...ABOUT_1} />
         <Stats {...STATS} />
-        <Section {...ABOUT_2} />
-        <Anchor i="track" />
+        <About2 {...ABOUT_2} />
         <Spacer sz={14} />
+        <Anchor i="track" />
         <Track {...TRACK} />
         <Spacer sz={14} />
         <Anchor i="t-hist" />

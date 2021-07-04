@@ -64,6 +64,10 @@ const Arrow = styled(Image)`
   padding: 0;
   cursor: pointer;
   diplay: inline;
+
+  &.no-link {
+    cursor: auto;
+  }
 `;
 
 const HexHeadshot = styled(Image)`
@@ -96,6 +100,14 @@ const Dot = styled.button`
   &.active {
     opacity: 100%;
   }
+`;
+
+const Trail = styled(Image)`
+  position: absolute;
+  bottom: -10%;
+  display: none;
+  ${media.lg`width: 100%!important;`};
+  ${media.lg`display: block;`};
 `;
 
 const StoryContainer = styled(Container)`
@@ -131,6 +143,11 @@ const Stories = ({ stories, heading }: StoriesProps) => {
         </Row>
       </Container>
       <StoryContainer>
+        <Trail
+          src="img/section-graphic/trail.png"
+          alt={heading + " Graphic"}
+          fluid
+        />
         <div ref={sliderRef} className="keen-slider">
           {stories.map((story: StoryProps) => (
             <StoryCard key={story.name} className="keen-slider__slide p-5 mb-2">
@@ -167,7 +184,7 @@ const Stories = ({ stories, heading }: StoriesProps) => {
                 }}
                 src="img/buttons/left.png"
               />
-              <Arrow src="img/buttons/center.png" />
+              <Arrow src="img/buttons/center.png" className="no-link" />
               <Arrow
                 onClick={(e) => {
                   e.stopPropagation();

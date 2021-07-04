@@ -13,5 +13,12 @@ export * from "./Stories";
 export { default as Section } from "./Section";
 export * from "./Section";
 
+export { default as About1 } from "./About1";
+export * from "./About1";
+
+export { default as About2 } from "./About2";
+export * from "./About2";
+
 export { default as Track } from "./Track";
 export * from "./Track";
+
