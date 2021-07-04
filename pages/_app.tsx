@@ -19,28 +19,44 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="theme-color" content="#000000" />
 
         <title>SET.Hacks() - Code the Future</title>
+        <meta name="title" content="SET.Hacks() - Code the Future" />
         <meta
-        name="description"
-        content="SET.Hacks() is a 24-hour virtual hackathon brought to you by the SET Foundation."
+          name="description"
+          content="SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With 6 guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech."
         />
-        
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sethacks.ca/" />
         <meta property="og:title" content="SET.Hacks() - Code the Future" />
-        <meta property="og:site_name" content="SET.Hacks()" />
-        <meta property="og:url" content="https://sethacks.ca" />
         <meta
-        property="og:image"
-        content="/static/media/Hackathon_logo_dev_1.71f206e3.png"
+          property="og:description"
+          content="SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With 6 guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech."
+        />
+        <meta property="og:image" content="img/Cover.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.sethacks.ca/" />
+        <meta
+          property="twitter:title"
+          content="SET.Hacks() - Code the Future"
         />
         <meta
-        property="og:description"
-        content="SET.Hacks() is a 24-hour virtual hackathon brought to you by the SET Foundation."
+          property="twitter:description"
+          content="SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With 6 guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech."
         />
+        <meta property="twitter:image" content="img/Cover.png" />
 
         <link rel="icon" href="favicon.ico" />
         <link rel="apple-touch-icon" href="logo192.png" />
         <link rel="manifest" href="manifest.json" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossOrigin="anonymous"></link>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+          crossOrigin="anonymous"
+        ></link>
       </Head>
+
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />

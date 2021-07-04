@@ -41,8 +41,6 @@ const Header = styled(Text)`
   ${media.lg`font-size: 160%`};
 `;
 
-console.log(media);
-
 const Logos = styled(Image)`
   cursor: pointer;
   ${media.lg`height: ${(props) => props.height}`};
