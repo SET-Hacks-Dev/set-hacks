@@ -279,6 +279,87 @@ export const CONTACT = {
   ),
 };
 
+export const PAST_SPONSORS = {
+  header: "2020 Sponsors",
+  gold: {
+    label: "Gold",
+    size: {
+      height: "12vh",
+      maxHeight: "80px",
+    },
+    sponsors: [
+      {
+        name: "Wolfram Language",
+        link: "https://www.wolfram.com/language/",
+        image: "img/sponsors/past/Wolfram.png",
+      },
+      {
+        name: "EchoAr",
+        link: "https://www.echoar.xyz/",
+        image: "img/sponsors/past/echoAR.png",
+      },
+      {
+        name: "1Password.com",
+        link: "https://1password.com/",
+        image: "img/sponsors/past/1Password.png",
+      },
+      {
+        name: "Balsamiq",
+        link: "https://balsamiq.com/",
+        image: "img/sponsors/past/balsamiq.png",
+      },
+      {
+        name: "Repl.It",
+        link: "https://repl.it/",
+        image: "img/sponsors/past/Repl.it.png",
+      },
+      {
+        name: "BugSee",
+        link: "https://www.bugsee.com/",
+        image: "img/sponsors/past/bugsee.png",
+      },
+    ],
+  },
+  silver: {
+    label: "Silver",
+    size: {
+      height: "10vh",
+      maxHeight: "65px",
+    },
+    sponsors: [
+      {
+        name: "Linode",
+        link: "https://www.linode.com/",
+        image: "img/sponsors/past/Linode.png",
+      },
+      {
+        name: "ToHacks 2020",
+        link: "https://www.tohacks.ca/",
+        image: "img/sponsors/past/tohacks.png",
+      },
+    ],
+  },
+  bronze: {
+    label: "Bronze",
+    size: {
+      height: "6vh",
+      maxHeight: "40px",
+    },
+    sponsors: [
+      {
+        name: "Digital Ocean",
+        link: "https://www.digitalocean.com/",
+        image: "img/sponsors/past/digitalocean.png",
+      },
+      {
+        name: "EdgePrim",
+        link: "https://edgeprim.com/",
+        image: "img/sponsors/past/edgeprim.png",
+      },
+    ],
+  },
+};
+
 export const FOOTER = {
   messages: [
     {

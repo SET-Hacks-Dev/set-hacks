@@ -10,6 +10,7 @@ import {
   STATS,
   STORIES,
   TRACK,
+  PAST_SPONSORS,
 } from "../constants";
 import {
   Anchor,
@@ -20,7 +21,7 @@ import {
   Terminal,
   Tilted,
 } from "../components";
-import { Faq, Hero, Section, Track, Stories } from "../sections";
+import { Faq, Hero, Section, Track, Stories, PastSponsors } from "../sections";
 
 const Index = () => {
   return (
@@ -44,7 +45,9 @@ const Index = () => {
         <Stories {...STORIES} />
         <Spacer sz={4} />
         <Anchor i="sponsors" />
-        <Section {...SPONSORS} />        
+        <Section {...SPONSORS} />
+        <Spacer sz={4} />
+        <PastSponsors {...PAST_SPONSORS} />
         <Spacer sz={14} />
         <Anchor i="faq" />
         <Faq {...FAQ} />
