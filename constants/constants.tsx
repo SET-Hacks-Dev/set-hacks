@@ -159,17 +159,51 @@ export const EXPLORE_TERMINAL = {
 
 export const TRACK = {
   heading: "🚊 Get on Track",
-  text: ["Pre-hackathon | August 9-11","Our six custom learning tracks, workshops and challenges help you truly understand major topics in tech, and prepare you to apply them to solve complex, interdisciplinary problems in the future.", "Each learning track has three, hour-long workshops, and one post-workshop do-it-yourself coding challenge."],
-  tracks: [
-    {id: 0, title: "Python", icon: "img/PythonIcon.svg", info: "We start off with the basics of Python, from syntax and data types, to variables, loops, and functions. We then dive into more complex operations with useful applications, such as data analysis using python libraries - ultimately enabling you to harness the power of Python to turn your ideas from imagination to reality."},
-    {id: 1, title: "Web Development", icon: "img/LaptopIcon.svg", info: "Our web development track introduces the fundamentals of HTML, CSS, and JavaScript, then combines them together to create a functional, interactive website. We then teach you how to incorporate more sophisticated frameworks such as React, Bootstrap, and Node.js to help you create dynamic, mobile-friendly websites with vastly expanded capabilities."},
-    {id: 2, title: "App Development", icon: "img/GearIcon.svg", info: "We will walk you through building iOS and Android apps using Flutter, a cross-platform app design tool. By the end of this track, you will go from beginner to having coded your first basic app."},
-    {id: 3, title: "Machine Learning", icon: "img/GearIcon.svg", info: "Our machine learning (ML) track breaks down the fundamentals of ML, covering the different types of ML, how neural networks really work, and their various architectures. Next, we present a comprehensive tutorial of Tensorflow and Keras that lets you create and apply diverse machine learning models to real-life datasets and problems."},
-    {id: 4, title: "Cloud Computing & APIs", icon: "img/GearIcon.svg", info: "We begin by briefly introducing how API frameworks and cloud computing architectures work, followed by an in-depth tutorial of how to use Microsoft Azure for cloud computing and storage. We finish off by teaching you how to use and apply popular APIs, as well as create your very own API."},
-    {id: 5, title: "Design", icon: "img/GearIcon.svg", info: "Making your applications clean and elegant is just as important as making them functional. Our design workshop teaches you all you need to know about designing appealing user interfaces that are captivating and strategies to create an engaging user experience."},
+  text: [
+    "Pre-hackathon | August 9-11",
+    "Our six custom learning tracks, workshops and challenges help you truly understand major topics in tech, and prepare you to apply them to solve complex, interdisciplinary problems in the future.",
+    "Each learning track has three, hour-long workshops, and one post-workshop do-it-yourself coding challenge.",
   ],
-  dark: true
-}
+  tracks: [
+    {
+      id: 0,
+      title: "Python",
+      icon: "img/PythonIcon.svg",
+      info: "We start off with the basics of Python, from syntax and data types, to variables, loops, and functions. We then dive into more complex operations with useful applications, such as data analysis using python libraries - ultimately enabling you to harness the power of Python to turn your ideas from imagination to reality.",
+    },
+    {
+      id: 1,
+      title: "Web Development",
+      icon: "img/LaptopIcon.svg",
+      info: "Our web development track introduces the fundamentals of HTML, CSS, and JavaScript, then combines them together to create a functional, interactive website. We then teach you how to incorporate more sophisticated frameworks such as React, Bootstrap, and Node.js to help you create dynamic, mobile-friendly websites with vastly expanded capabilities.",
+    },
+    {
+      id: 2,
+      title: "App Development",
+      icon: "img/GearIcon.svg",
+      info: "We will walk you through building iOS and Android apps using Flutter, a cross-platform app design tool. By the end of this track, you will go from beginner to having coded your first basic app.",
+    },
+    {
+      id: 3,
+      title: "Machine Learning",
+      icon: "img/GearIcon.svg",
+      info: "Our machine learning (ML) track breaks down the fundamentals of ML, covering the different types of ML, how neural networks really work, and their various architectures. Next, we present a comprehensive tutorial of Tensorflow and Keras that lets you create and apply diverse machine learning models to real-life datasets and problems.",
+    },
+    {
+      id: 4,
+      title: "Cloud Computing & APIs",
+      icon: "img/GearIcon.svg",
+      info: "We begin by briefly introducing how API frameworks and cloud computing architectures work, followed by an in-depth tutorial of how to use Microsoft Azure for cloud computing and storage. We finish off by teaching you how to use and apply popular APIs, as well as create your very own API.",
+    },
+    {
+      id: 5,
+      title: "Design",
+      icon: "img/GearIcon.svg",
+      info: "Making your applications clean and elegant is just as important as making them functional. Our design workshop teaches you all you need to know about designing appealing user interfaces that are captivating and strategies to create an engaging user experience.",
+    },
+  ],
+  dark: true,
+};
 
 export const FAQ = {
   heading: "💡 Frequently Asked Questions",
