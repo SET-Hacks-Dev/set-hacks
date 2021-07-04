@@ -19,7 +19,7 @@ const StyledContainer = styled(Container)`
 
 const Rocket = styled(Image)`
   display: none;
-  max-height: 90vh;
+  max-height: 80vh;
   ${media.lg`display: block`};
 `;
 
@@ -32,7 +32,7 @@ const Hero = () => {
           lg={6}
           className="d-flex align-items-center justify-content-end"
         >
-          <Rocket src={HOME.image} alt="Hero" fluid />
+          <Rocket className = "p-3" src={HOME.image} alt="Hero" fluid />
         </Col>
         <Col xs={12} lg={6} className="d-flex align-items-center">
           <div className="w-100 d-flex justify-content-center flex-column">

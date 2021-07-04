@@ -18,11 +18,11 @@ const Devpost = ({ size }: { size: number }) => (
   >
     <path
       d="m48.7 4.8h-33.4l-15.3 27.2 15.7 27.2h33.1l15.2-27.2z"
-      fill={theme.colors.secondaryVariant}
+      fill={theme.colors.brand[400]}
     />
     <path
       d="m32.2 16.9h-10.8v30.3h10.8c8.2 0 14.9-6.8 14.9-15.1s-6.6-15.2-14.9-15.2zm-.2 24.2h-4.5v-18.2h4.5c5 0 9.1 4.1 9.1 9.1s-4.1 9.1-9.1 9.1z"
-      fill={theme.colors.secondary}
+      fill="#fff"
     />
   </svg>
 );
@@ -53,13 +53,13 @@ export const HOME = {
     { icon: Instagram, url: "https://www.instagram.com/set.ottawa/" },
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
-  image: "/img/rocket.png",
+  image: "/img/section-graphic/rocket.png",
 };
 
 export const ABOUT_1 = {
   heading: "👉 Kickstart your big idea at *SET.Hacks()*",
   text: "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
-  image: "/assets/puzzle.png",
+  image: "/img/section-graphic/puzzle.png",
   link: {
     label: "View 2020 Devpost submissions →",
     href: "https://set-hacks.devpost.com/",
@@ -80,7 +80,7 @@ export const STATS = {
 export const ABOUT_2 = {
   heading: "🚀 Code the Future",
   text: "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
-  image: "/assets/spaceship.png",
+  image: "/img/section-graphic/spaceship.png",
   reverse: true,
   className: "p-5",
   dark: true,

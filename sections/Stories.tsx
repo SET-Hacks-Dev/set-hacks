@@ -165,15 +165,15 @@ const Stories = ({ stories, heading }: StoriesProps) => {
                   e.stopPropagation();
                   slider.prev();
                 }}
-                src="assets/left.png"
+                src="img/buttons/left.png"
               />
-              <Arrow src="assets/center.png" />
+              <Arrow src="img/buttons/center.png" />
               <Arrow
                 onClick={(e) => {
                   e.stopPropagation();
                   slider.next();
                 }}
-                src="assets/right.png"
+                src="img/buttons/right.png"
               />
             </div>
             <div className="d-flex justify-content-center">
