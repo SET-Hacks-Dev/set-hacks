@@ -32,7 +32,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           property="og:description"
           content="SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With 6 guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech."
         />
-        <meta property="og:image" content="img/Cover.png" />
+        <meta
+          property="og:image"
+          content="https://user-images.githubusercontent.com/65046640/124401230-27a32180-dcf6-11eb-8b0b-4ffb524dbbaf.png"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.sethacks.ca/" />
@@ -44,7 +47,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           property="twitter:description"
           content="SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With 6 guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech."
         />
-        <meta property="twitter:image" content="img/Cover.png" />
+        <meta
+          property="twitter:image"
+          content="https://user-images.githubusercontent.com/65046640/124401230-27a32180-dcf6-11eb-8b0b-4ffb524dbbaf.png"
+        />
 
         <link rel="icon" href="favicon.ico" />
         <link rel="apple-touch-icon" href="logo192.png" />
