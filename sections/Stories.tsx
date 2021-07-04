@@ -1,12 +1,14 @@
-import styled from "styled-components";
-import { rgba } from "polished";
-import { media, theme } from "../theme";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import React, { LegacyRef, useRef } from "react";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+
+import { Col, Container, Image, Row } from "react-bootstrap";
+import React, { LegacyRef, useRef } from "react";
+import { media, theme } from "../theme";
+
 import { Heading } from "../components";
 import Link from "../components/Link";
+import { rgba } from "polished";
+import styled from "styled-components";
+import { useKeenSlider } from "keen-slider/react";
 
 type StoryProps = {
   name: string;

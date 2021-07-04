@@ -300,21 +300,21 @@ export const STARS = {
   id: "bg-stars",
   tiers: [
     {
-      count: 5,
+      count: 4,
       image: Star1,
-      opacity: 1,
+      opacity: 0.5,
       strength: 300,
     },
     {
       count: 5,
       image: Star2,
-      opacity: 0.8,
+      opacity: 0.4,
       strength: 200,
     },
     {
-      count: 5,
+      count: 6,
       image: Star3,
-      opacity: 0.6,
+      opacity: 0.3,
       strength: 100,
     }
   ]
