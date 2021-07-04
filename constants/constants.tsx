@@ -59,7 +59,7 @@ export const HOME = {
 export const ABOUT_1 = {
   heading: "👉 Kickstart your big idea at *SET.Hacks()*",
   text: "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
-  image: "/img/section-graphic/puzzle.png",
+  image: "/img/section-graphic/about.png",
   link: {
     label: "View 2020 Devpost submissions →",
     href: "https://set-hacks.devpost.com/",
@@ -233,7 +233,7 @@ export const SPONSORS = {
     isLink: true,
     target: "/doc/SET.Hacks()_Sponsorship_Package.pdf",
   },
-  image: "/img/graphic3.png",
+  image: "/img/section-graphic/sponsor.png",
 };
 export const CONTACT = {
   heading: "📧 Still have a question?",

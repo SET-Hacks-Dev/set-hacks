@@ -102,14 +102,6 @@ const Dot = styled.button`
   }
 `;
 
-const Trail = styled(Image)`
-  position: absolute;
-  bottom: -10%;
-  display: none;
-  ${media.lg`width: 100%!important;`};
-  ${media.lg`display: block;`};
-`;
-
 const StoryContainer = styled(Container)`
   ${media.lg`max-width: 100%; padding: 0; margin: 0;`};
 `;
@@ -143,11 +135,6 @@ const Stories = ({ stories, heading }: StoriesProps) => {
         </Row>
       </Container>
       <StoryContainer>
-        <Trail
-          src="img/section-graphic/trail.png"
-          alt={heading + " Graphic"}
-          fluid
-        />
         <div ref={sliderRef} className="keen-slider">
           {stories.map((story: StoryProps) => (
             <StoryCard key={story.name} className="keen-slider__slide p-5 mb-2">
