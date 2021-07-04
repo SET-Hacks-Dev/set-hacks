@@ -15,3 +15,6 @@ export * from "./Section";
 
 export { default as Track } from "./Track";
 export * from "./Track";
+
+export { default as PastSponsors } from "./PastSponsors";
+export * from "./PastSponsors";
