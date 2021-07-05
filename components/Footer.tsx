@@ -10,6 +10,7 @@ import styled from "styled-components";
 const StyledBackground = styled.div`
   background-color: ${theme.colors.brand[800]};
   padding: 5rem 0;
+  z-index: 1000;
 
   & > * {
     color: ${theme.colors.white};

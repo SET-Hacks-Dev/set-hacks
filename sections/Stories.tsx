@@ -66,6 +66,10 @@ const Arrow = styled(Image)`
   padding: 0;
   cursor: pointer;
   diplay: inline;
+
+  &.no-link {
+    cursor: auto;
+  }
 `;
 
 const HexHeadshot = styled(Image)`
@@ -167,15 +171,15 @@ const Stories = ({ stories, heading }: StoriesProps) => {
                   e.stopPropagation();
                   slider.prev();
                 }}
-                src="assets/left.png"
+                src="img/buttons/left.png"
               />
-              <Arrow src="assets/center.png" />
+              <Arrow src="img/buttons/center.png" className="no-link" />
               <Arrow
                 onClick={(e) => {
                   e.stopPropagation();
                   slider.next();
                 }}
-                src="assets/right.png"
+                src="img/buttons/right.png"
               />
             </div>
             <div className="d-flex justify-content-center">
