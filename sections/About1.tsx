@@ -3,7 +3,7 @@ import { ButtonProps, Heading, Text, Link, Button } from "../components";
 import styled from "styled-components";
 import theme from "../theme/theme";
 
-type About1Props = {
+type About2Props = {
   heading: string;
   text?: string;
   link?: {
@@ -19,7 +19,7 @@ type About1Props = {
   dark?: boolean;
 };
 
-const About1Wrapper = styled(Container)`
+const About2Wrapper = styled(Container)`
   > * {
     color: ${(props) =>
       props.dark
@@ -28,7 +28,7 @@ const About1Wrapper = styled(Container)`
   }
 `;
 
-const About1 = ({
+const About2 = ({
   heading,
   text,
   link,
@@ -39,9 +39,9 @@ const About1 = ({
   className = "",
   reverse = false,
   dark = false,
-}: About1Props) => {
+}: About2Props) => {
   return (
-    <About1Wrapper dark={dark ? 1 : 0}>
+    <About2Wrapper dark={dark ? 1 : 0}>
       <Row className="d-flex align-items-center">
         <Col
           xs={{ span: 12, order: reverse ? "last" : "first" }}
@@ -65,8 +65,8 @@ const About1 = ({
           </Col>
         )}
       </Row>
-    </About1Wrapper>
+    </About2Wrapper>
   );
 };
 
-export default About1;
+export default About2;
