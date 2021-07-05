@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Col, Container, Row, Image, Card } from "react-bootstrap";
-import { Heading, Text } from "../components";
+import { Heading, Text, Link } from "../components";
 import styled from "styled-components";
 import { media } from "../theme";
 
@@ -143,7 +143,7 @@ const Track = ({
                       className="btn p-0"
                       onClick={() => setActiveTrack(activeTrack - 1)}
                     >
-                      <Buttons text={"← " + tracks[activeTrack - 1].title} />
+                      <Link>{"← " + tracks[activeTrack - 1].title}</Link>
                     </div>
                   )}
                 </Col>
@@ -154,7 +154,7 @@ const Track = ({
                       onClick={() => setActiveTrack(activeTrack + 1)}
                       style={{ float: "right" }}
                     >
-                      <Buttons text={tracks[activeTrack + 1].title + " →"} />
+                      <Link>{tracks[activeTrack + 1].title + " →"}</Link>
                     </div>
                   )}
                 </Col>
