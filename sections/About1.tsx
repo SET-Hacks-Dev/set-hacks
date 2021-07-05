@@ -1,9 +1,8 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import { ButtonProps, Heading, Text, Link, Button } from "../components";
 import styled from "styled-components";
-import theme from "../theme/theme";
 
-type About2Props = {
+type About1Props = {
   heading: string;
   text?: string;
   link?: {
@@ -19,7 +18,7 @@ type About2Props = {
   dark?: boolean;
 };
 
-const About2Wrapper = styled(Container)`
+const About1Wrapper = styled(Container)`
   > * {
     color: ${(props) =>
       props.dark
@@ -28,7 +27,7 @@ const About2Wrapper = styled(Container)`
   }
 `;
 
-const About2 = ({
+const About1 = ({
   heading,
   text,
   link,
@@ -39,9 +38,9 @@ const About2 = ({
   className = "",
   reverse = false,
   dark = false,
-}: About2Props) => {
+}: About1Props) => {
   return (
-    <About2Wrapper dark={dark ? 1 : 0}>
+    <About1Wrapper dark={dark ? 1 : 0}>
       <Row className="d-flex align-items-center">
         <Col
           xs={{ span: 12, order: reverse ? "last" : "first" }}
@@ -65,8 +64,8 @@ const About2 = ({
           </Col>
         )}
       </Row>
-    </About2Wrapper>
+    </About1Wrapper>
   );
 };
 
-export default About2;
+export default About1;

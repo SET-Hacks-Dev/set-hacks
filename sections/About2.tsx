@@ -3,7 +3,7 @@ import { ButtonProps, Heading, Text, Link, Button } from "../components";
 import styled from "styled-components";
 import media from "../theme/media";
 
-type About1Props = {
+type About2Props = {
   heading: string;
   text?: string;
   link?: {
@@ -19,7 +19,7 @@ type About1Props = {
   dark?: boolean;
 };
 
-const About1Wrapper = styled(Container)`
+const About2Wrapper = styled(Container)`
   > * {
     color: ${(props) =>
       props.dark
@@ -36,7 +36,7 @@ const Spaceship = styled(Image)`
   ${media.lg`width: 60%!important;`};
 `;
 
-const About1 = ({
+const About2 = ({
   heading,
   text,
   link,
@@ -47,10 +47,10 @@ const About1 = ({
   className = "",
   reverse = false,
   dark = false,
-}: About1Props) => {
+}: About2Props) => {
   return (
-    <div className="my-5 py-5">
-      <About1Wrapper dark={dark ? 1 : 0}>
+    <div className="my-5 py-5 position-relative">
+      <About2Wrapper dark={dark ? 1 : 0}>
         <Row className="d-flex align-items-center justify-content-end">
           <Col
             xs={{ span: 12, order: reverse ? "last" : "first" }}
@@ -69,7 +69,7 @@ const About1 = ({
             )}
           </Col>
         </Row>
-      </About1Wrapper>
+      </About2Wrapper>
       <Spaceship
         src={image}
         alt={heading + " Graphic"}
@@ -79,4 +79,4 @@ const About1 = ({
   );
 };
 
-export default About1;
+export default About2;
