@@ -23,7 +23,17 @@ import {
   Tilted,
 } from "../components";
 
-import { Faq, Hero, Section, Stars, Track, Stories, About1, About2, PastSponsors } from "../sections";
+import {
+  Faq,
+  Hero,
+  Section,
+  Stars,
+  Track,
+  Stories,
+  About1,
+  About2,
+  PastSponsors,
+} from "../sections";
 
 const Index = () => {
   return (
@@ -51,7 +61,6 @@ const Index = () => {
         <Section {...SPONSORS} />
         <Spacer sz={4} />
         <PastSponsors {...PAST_SPONSORS} />
-        <Spacer sz={14} />
         <Anchor i="faq" />
         <Spacer sz={14} />
         <Faq {...FAQ} />

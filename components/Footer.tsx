@@ -18,10 +18,8 @@ const StyledBackground = styled.div`
 `;
 
 const StyledMessageContainer = styled(Col)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: "center";
+  justify-content: "space-between";
 `;
 
 const StyledTextGroup = styled.div`
@@ -31,7 +29,7 @@ const StyledTextGroup = styled.div`
 `;
 
 const StyledHeading = styled.p`
-  color: ${rgba(theme.colors.white, 0.8)};
+  color: ${rgba(theme.colors.white, 0.9)};
   font-size: ${theme.fontSizes.lg};
   ${media.lg`font-size: ${theme.fontSizes.xl}`};
   font-weight: 600;
@@ -45,7 +43,7 @@ const StyledText = styled.p`
 `;
 
 const StyledLinkGroupTitle = styled.p`
-  color: ${rgba(theme.colors.white, 0.6)};
+  color: ${rgba(theme.colors.white, 0.9)};
   margin: 0 0 0.5rem 0;
   text-transform: uppercase;
   font-size: ${theme.fontSizes.xs};
@@ -87,6 +85,10 @@ const StyledIconContainer = styled.div`
   }
 `;
 
+const StyledButton = styled.div`
+  ${media.lg`float: right`};
+`;
+
 type MessageProps = {
   title: string;
   text: string;
@@ -120,25 +122,27 @@ const Footer = ({ messages, social, groups }: FooterProps) => {
       <Container>
         <Row>
           {messages.map((message: MessageProps) => (
-            <StyledMessageContainer
-              xs={12}
-              className={"mb-4 pb-1"}
-              key={hashString(message.title)}
-            >
-              <StyledTextGroup>
-                <StyledHeading>{message.title}</StyledHeading>
-                <StyledText>{message.text}</StyledText>
-              </StyledTextGroup>
-              <Button {...message.button} />
-            </StyledMessageContainer>
+            <Row className={"mb-4 pb-1"} key={hashString(message.title)}>
+              <StyledMessageContainer lg={6} xs={12} className={"pb-3"}>
+                <StyledTextGroup>
+                  <StyledHeading>{message.title}</StyledHeading>
+                  <StyledText>{message.text}</StyledText>
+                </StyledTextGroup>
+              </StyledMessageContainer>
+              <Col lg={6} xs={12} className={"py-4 px-2"}>
+                <StyledButton>
+                  <Button {...message.button} />
+                </StyledButton>
+              </Col>
+            </Row>
           ))}
           <StyledHr />
         </Row>
         <Row>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={6} sm={6} md={3}>
             <StyledHeading>SET.Foundation</StyledHeading>
             <StyledText>Registered NPO</StyledText>
-            <div className={"d-flex flex-row align-items-center mt-2"}>
+            <div className={"d-flex flex-row align-items-center mt-3"}>
               {social.map((s: SocialProps) => (
                 <a href={s.url} key={hashString(s.url)}>
                   <StyledIconContainer>
@@ -148,9 +152,8 @@ const Footer = ({ messages, social, groups }: FooterProps) => {
               ))}
             </div>
           </Col>
-
           {groups.map((group: LinkGroupProps) => (
-            <Col xs={12} sm={6} md={3} key={group.heading}>
+            <Col xs={6} sm={6} md={3} key={group.heading} className={"mb-3"}>
               <StyledLinkGroupTitle>{group.heading}</StyledLinkGroupTitle>
               {group.links.map((link: LinkProps) => (
                 <p key={link.href}>
