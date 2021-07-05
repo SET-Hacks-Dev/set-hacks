@@ -1,9 +1,11 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Image } from "react-bootstrap";
 
+import { CornerDownLeft } from "react-feather";
 import Heading from "./Heading";
 import Link from "./Link";
 import React from "react";
 import styled from "styled-components";
+import media from "../theme/media";
 
 const StyledFrame = styled(Col)`
   background-image: linear-gradient(
@@ -105,7 +107,7 @@ const Prompt = ({ active, val, submitCommand, id }: PromptProps) => {
         <button type="submit" hidden={true}></button>
       </StyledForm>
       <StyledPromptText style={{ opacity: 0.45 }}>
-        press [enter]
+        {command == "" ? "write ls for help" : "press [enter]"}
       </StyledPromptText>
     </div>
   );
@@ -132,18 +134,46 @@ type TerminalHistoryProps = {
   id: string;
 };
 
+const Trail = styled(Image)`
+  position: absolute;
+  top: 10%;
+  z-index: -1;
+  display: none;
+  ${media.lg`width: 100%!important;`};
+  ${media.lg`display: block;`};
+`;
+
 const Terminal = ({ heading, commands, link }: TerminalProps) => {
+  let [all, setAll] = React.useState<Set<number>>(new Set<number>());
+  let [seen, setSeen] = React.useState<Set<number>>(new Set<number>());
+
+  const subtract = (setA: Set<number>, setB: Set<number>): Set<number> => {
+    let res = new Set<number>(setA);
+    setB.forEach((el) => {
+      if (res.has(el))
+        res.delete(el);
+    });
+    return res;
+  }
+
   const handleCommandSubmit = (command: string): void => {
     let value = "Unknown command.";
-    const rnd = Math.floor(Math.random() * (commands.length - 1)) + 1;
 
     for (let i = 0; i < commands.length; ++i) {
       if (commands[i].name.toLowerCase() === command.toLowerCase()) {
         value = commands[i].value;
+        seen.add(i);
+        setSeen(seen);
         break;
       }
     }
 
+    let diff = subtract(all, seen);
+    let next = -1;
+
+    if (diff.size)
+      next = Array.from(diff)[Math.floor(Math.random() * diff.size)];
+    
     let histCopy = [...terminalHistory];
     histCopy[histCopy.length - 1].active = false;
     let len = histCopy.length;
@@ -153,7 +183,7 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
       {
         isPrompt: true,
         active: true,
-        val: commands[rnd].name,
+        val: next == -1 ? "" : commands[next].name,
         id: `t-hist-${len + 2}`,
       },
     ]);
@@ -180,42 +210,62 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
         el.focus();
       }, 0);
     }
-  });
+
+    if (!all.size) {
+      for (let i = 0; i < commands.length; ++i) {      
+        all.add(i);
+      }
+      all.add(-1);
+      seen.add(-1);
+      seen.add(0);
+      setAll(all);
+      setSeen(seen);
+    }
+  }, [all, seen, terminalHistory, commands.length]);
 
   return (
-    <Container>
-      <Row className="justify-content-center">
-        <StyledFrame className="mb-4">
-          <StyledTerminal>
-            <div className="w-100 d-flex justify-content-center align-items-center mb-3">
-              <StyledHeading>{heading}</StyledHeading>
-            </div>
-            <StyledHistoryWrapper ref={R}>
-              {terminalHistory.map((item, i) =>
-                item.isPrompt ? (
-                  <Prompt
-                    key={i}
-                    active={item.active}
-                    val={item.val}
-                    submitCommand={handleCommandSubmit}
-                    id={item.id}
-                  />
-                ) : (
-                  <StyledCommandResult key={i} id={item.id}>
-                    {item.val}
-                  </StyledCommandResult>
-                )
-              )}
-            </StyledHistoryWrapper>
-          </StyledTerminal>
-        </StyledFrame>
-      </Row>
-      <Row className="justify-content-center">
-        <Col style={{ maxWidth: 850 }}>
-          <Link href={link.href}>{link.label}</Link>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <div>
+        <Trail
+          src="img/section-graphic/trail.png"
+          alt={heading + " Graphic"}
+          fluid
+        />
+        <Container>
+          <Row className="justify-content-center">
+            <StyledFrame className="mb-4">
+              <StyledTerminal>
+                <div className="w-100 d-flex justify-content-center align-items-center mb-3">
+                  <StyledHeading>{heading}</StyledHeading>
+                </div>
+                <StyledHistoryWrapper ref={R}>
+                  {terminalHistory.map((item, i) =>
+                    item.isPrompt ? (
+                      <Prompt
+                        key={i}
+                        active={item.active}
+                        val={item.val}
+                        submitCommand={handleCommandSubmit}
+                        id={item.id}
+                      />
+                    ) : (
+                      <StyledCommandResult key={i} id={item.id}>
+                        {item.val}
+                      </StyledCommandResult>
+                    )
+                  )}
+                </StyledHistoryWrapper>
+              </StyledTerminal>
+            </StyledFrame>
+          </Row>
+          <Row className="justify-content-center">
+            <Col style={{ maxWidth: 850 }}>
+              <Link href={link.href}>{link.label}</Link>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
   );
 };
 

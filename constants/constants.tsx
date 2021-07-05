@@ -7,6 +7,10 @@ import {
   MapPin,
 } from "react-feather";
 import { Link, TextChildren } from "../components";
+
+import Star1 from "../public/img/t1.png";
+import Star2 from "../public/img/t2.png";
+import Star3 from "../public/img/t3.png";
 import { theme } from "../theme";
 
 const Devpost = ({ size }: { size: number }) => (
@@ -18,11 +22,11 @@ const Devpost = ({ size }: { size: number }) => (
   >
     <path
       d="m48.7 4.8h-33.4l-15.3 27.2 15.7 27.2h33.1l15.2-27.2z"
-      fill={theme.colors.secondaryVariant}
+      fill={theme.colors.brand[400]}
     />
     <path
       d="m32.2 16.9h-10.8v30.3h10.8c8.2 0 14.9-6.8 14.9-15.1s-6.6-15.2-14.9-15.2zm-.2 24.2h-4.5v-18.2h4.5c5 0 9.1 4.1 9.1 9.1s-4.1 9.1-9.1 9.1z"
-      fill={theme.colors.secondary}
+      fill="#fff"
     />
   </svg>
 );
@@ -53,12 +57,13 @@ export const HOME = {
     { icon: Instagram, url: "https://www.instagram.com/set.ottawa/" },
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
-  image: "/img/rocket.png",
+  image: "/img/section-graphic/rocket.png",
 };
 
 export const ABOUT_1 = {
   heading: "👉 Kickstart your big idea at *SET.Hacks()*",
   text: "A virtual, *beginner-friendly* hackathon that brings high school students together to build future-ready solutions over 48 hours. Started by the SET Foundation in 2020, our mission is to pave the path for students who want to explore the tech space. Regardless of your experience or background, we want to see your ideas and help you bring them to life!",
+  image: "/img/section-graphic/hexagon.png",
   link: {
     label: "View 2020 Devpost submissions →",
     href: "https://set-hacks.devpost.com/",
@@ -79,7 +84,7 @@ export const STATS = {
 export const ABOUT_2 = {
   heading: "🚀 Code the Future",
   text: "We’ve all wondered what the future will look like. This is your chance to build it through code. Stay tuned as we release the details of this year’s challenge!",
-  image: "/img/graphic2.png",
+  image: "/img/section-graphic/spaceship.png",
   reverse: true,
   className: "p-5",
   dark: true,
@@ -104,7 +109,7 @@ export const STORIES = {
       link: "https://devpost.com/software/supplant",
       quote:
         "As my first hackathon experience, SET.Hacks() was amazing! In spite of being online, the SET team organized the hackathon exceptionally well and made it as easy as possible for my peers and I to compete as first time hackers. Overall, SET.Hacks() gave me the unique opportunity to explore a plethora of STEM opportunities and meet many new like-minded individuals.",
-      headshot: "eshwara.png",
+      headshot: "eshwara-2.png",
     },
     {
       name: "Jerry Cheng",
@@ -114,7 +119,7 @@ export const STORIES = {
       quote:
         "SET.Hacks() was a really fun and rewarding experience! I got to learn new skills and use different tools while building my project, as well as participating in the many workshops they offer.",
       // TODO - get an image for jerry
-      headshot: "placeholder.png",
+      headshot: "jerry.png",
     },
     {
       name: "Vansh Sethi",
@@ -266,7 +271,7 @@ export const SPONSORS = {
     isLink: true,
     target: "/doc/SET.Hacks()_Sponsorship_Package.pdf",
   },
-  image: "/img/graphic3.png",
+  image: "/img/section-graphic/sponsor.png",
 };
 export const CONTACT = {
   heading: "📧 Still have a question?",
@@ -406,3 +411,27 @@ export const FOOTER = {
     },
   ],
 };
+
+export const STARS = {
+  id: "bg-stars",
+  tiers: [
+    {
+      count: 4,
+      image: Star1,
+      opacity: 0.5,
+      strength: 300,
+    },
+    {
+      count: 5,
+      image: Star2,
+      opacity: 0.4,
+      strength: 200,
+    },
+    {
+      count: 6,
+      image: Star3,
+      opacity: 0.3,
+      strength: 100,
+    }
+  ]
+}
