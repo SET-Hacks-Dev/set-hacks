@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Col, Container, Row, Image, Card } from "react-bootstrap";
-import { Heading, Text } from "../components";
+import { Heading, Text, Link } from "../components";
 import styled from "styled-components";
 import { media } from "../theme";
 
@@ -31,7 +31,7 @@ const TrackWrapper = styled(Container)`
 const LargeIcon = styled(Image)`
   position: absolute;
   display: none;
-  height: 500px;
+  height: 470px;
   max-height: 35vw;
   left: 0;
   top: 0;
@@ -71,6 +71,7 @@ const Icons = styled(Col)`
 
 const IconsText = styled(Text)`
   font-size: 80%;
+  font-weight: 550;
   ${media.lg`font-size: 120%`};
   ${media.lg`font-weight: bold`};
 `;
@@ -143,7 +144,7 @@ const Track = ({
                       className="btn p-0"
                       onClick={() => setActiveTrack(activeTrack - 1)}
                     >
-                      <Buttons text={"← " + tracks[activeTrack - 1].title} />
+                      <Link>{"← " + tracks[activeTrack - 1].title}</Link>
                     </div>
                   )}
                 </Col>
@@ -154,7 +155,7 @@ const Track = ({
                       onClick={() => setActiveTrack(activeTrack + 1)}
                       style={{ float: "right" }}
                     >
-                      <Buttons text={tracks[activeTrack + 1].title + " →"} />
+                      <Link>{tracks[activeTrack + 1].title + " →"}</Link>
                     </div>
                   )}
                 </Col>

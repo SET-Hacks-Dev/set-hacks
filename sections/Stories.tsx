@@ -185,15 +185,13 @@ const Stories = ({ stories, heading }: StoriesProps) => {
             <div className="d-flex justify-content-center">
               {Array.from(Array(slider.details().size).keys()).map((idx) => {
                 return (
-                  <>
-                    <Dot
-                      key={idx}
-                      onClick={() => {
-                        slider.moveToSlideRelative(idx);
-                      }}
-                      className={currentSlide === idx ? "active" : ""}
-                    />
-                  </>
+                  <Dot
+                    key={idx}
+                    onClick={() => {
+                      slider.moveToSlideRelative(idx);
+                    }}
+                    className={currentSlide === idx ? "active" : ""}
+                  />
                 );
               })}
             </div>
