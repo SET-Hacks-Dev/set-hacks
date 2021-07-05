@@ -18,10 +18,8 @@ const StyledBackground = styled.div`
 `;
 
 const StyledMessageContainer = styled(Col)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: "center";
+  justify-content: "space-between";
 `;
 
 const StyledTextGroup = styled.div`
@@ -87,6 +85,10 @@ const StyledIconContainer = styled.div`
   }
 `;
 
+const StyledButton = styled.div`
+  ${media.lg`float: right`};
+`;
+
 type MessageProps = {
   title: string;
   text: string;
@@ -120,17 +122,19 @@ const Footer = ({ messages, social, groups }: FooterProps) => {
       <Container>
         <Row>
           {messages.map((message: MessageProps) => (
-            <StyledMessageContainer
-              xs={12}
-              className={"mb-4 pb-1"}
-              key={hashString(message.title)}
-            >
-              <StyledTextGroup>
-                <StyledHeading>{message.title}</StyledHeading>
-                <StyledText>{message.text}</StyledText>
-              </StyledTextGroup>
-              <Button {...message.button} />
-            </StyledMessageContainer>
+            <Row className={"mb-4 pb-1"} key={hashString(message.title)}>
+              <StyledMessageContainer lg={6} xs={12} className={"pb-3"}>
+                <StyledTextGroup>
+                  <StyledHeading>{message.title}</StyledHeading>
+                  <StyledText>{message.text}</StyledText>
+                </StyledTextGroup>
+              </StyledMessageContainer>
+              <Col lg={6} xs={12} className={"py-4 px-2"}>
+                <StyledButton>
+                  <Button {...message.button} />
+                </StyledButton>
+              </Col>
+            </Row>
           ))}
           <StyledHr />
         </Row>
