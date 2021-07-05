@@ -23,7 +23,17 @@ import {
   Tilted,
 } from "../components";
 
-import { Faq, Hero, Section, Stars, Track, Stories, About1, About2, PastSponsors } from "../sections";
+import {
+  Faq,
+  Hero,
+  Section,
+  Stars,
+  Track,
+  Stories,
+  About1,
+  About2,
+  PastSponsors,
+} from "../sections";
 
 const Index = () => {
   return (
