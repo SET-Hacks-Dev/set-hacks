@@ -7,9 +7,10 @@ import {
   FOOTER,
   NAVIGATION,
   SPONSORS,
+  STARS,
   STATS,
   STORIES,
-  TRACK,
+  TRACK
 } from "../constants";
 import {
   Anchor,
@@ -20,7 +21,7 @@ import {
   Terminal,
   Tilted,
 } from "../components";
-import { Faq, Hero, Section, Track, Stories } from "../sections";
+import { Faq, Hero, Section, Stars, Stories, Track } from "../sections";
 
 const Index = () => {
   return (
@@ -28,10 +29,12 @@ const Index = () => {
       <Navbar {...NAVIGATION} />
       <Hero />
       <Tilted>
-        <Anchor i="about" />
-        <Section {...ABOUT_1} />
-        <Stats {...STATS} />
-        <Section {...ABOUT_2} />
+        <Stars {...STARS}>
+          <Anchor i="about" />
+          <Section {...ABOUT_1} />
+          <Stats {...STATS} />
+          <Section {...ABOUT_2} />
+        </Stars>
         <Anchor i="track" />
         <Spacer sz={14} />
         <Track {...TRACK} />

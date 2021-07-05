@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 
+import { CornerDownLeft } from "react-feather";
 import Heading from "./Heading";
 import Link from "./Link";
 import React from "react";
@@ -105,7 +106,7 @@ const Prompt = ({ active, val, submitCommand, id }: PromptProps) => {
         <button type="submit" hidden={true}></button>
       </StyledForm>
       <StyledPromptText style={{ opacity: 0.45 }}>
-        press [enter]
+        {command == "" ? "write ls for help" : "press [enter]"}
       </StyledPromptText>
     </div>
   );
@@ -133,17 +134,36 @@ type TerminalHistoryProps = {
 };
 
 const Terminal = ({ heading, commands, link }: TerminalProps) => {
+  let [all, setAll] = React.useState<Set<number>>(new Set<number>());
+  let [seen, setSeen] = React.useState<Set<number>>(new Set<number>());
+
+  const subtract = (setA: Set<number>, setB: Set<number>): Set<number> => {
+    let res = new Set<number>(setA);
+    setB.forEach((el) => {
+      if (res.has(el))
+        res.delete(el);
+    });
+    return res;
+  }
+
   const handleCommandSubmit = (command: string): void => {
     let value = "Unknown command.";
-    const rnd = Math.floor(Math.random() * (commands.length - 1)) + 1;
 
     for (let i = 0; i < commands.length; ++i) {
       if (commands[i].name.toLowerCase() === command.toLowerCase()) {
         value = commands[i].value;
+        seen.add(i);
+        setSeen(seen);
         break;
       }
     }
 
+    let diff = subtract(all, seen);
+    let next = -1;
+
+    if (diff.size)
+      next = Array.from(diff)[Math.floor(Math.random() * diff.size)];
+    
     let histCopy = [...terminalHistory];
     histCopy[histCopy.length - 1].active = false;
     let len = histCopy.length;
@@ -153,7 +173,7 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
       {
         isPrompt: true,
         active: true,
-        val: commands[rnd].name,
+        val: next == -1 ? "" : commands[next].name,
         id: `t-hist-${len + 2}`,
       },
     ]);
@@ -180,7 +200,18 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
         el.focus();
       }, 0);
     }
-  });
+
+    if (!all.size) {
+      for (let i = 0; i < commands.length; ++i) {      
+        all.add(i);
+      }
+      all.add(-1);
+      seen.add(-1);
+      seen.add(0);
+      setAll(all);
+      setSeen(seen);
+    }
+  }, [all, seen, terminalHistory, commands.length]);
 
   return (
     <Container>
