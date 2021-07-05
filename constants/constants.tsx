@@ -7,6 +7,10 @@ import {
   MapPin,
 } from "react-feather";
 import { Link, TextChildren } from "../components";
+
+import Star1 from "../public/img/t1.png";
+import Star2 from "../public/img/t2.png";
+import Star3 from "../public/img/t3.png";
 import { theme } from "../theme";
 
 const Devpost = ({ size }: { size: number }) => (
@@ -292,3 +296,27 @@ export const FOOTER = {
     },
   ],
 };
+
+export const STARS = {
+  id: "bg-stars",
+  tiers: [
+    {
+      count: 4,
+      image: Star1,
+      opacity: 0.5,
+      strength: 300,
+    },
+    {
+      count: 5,
+      image: Star2,
+      opacity: 0.4,
+      strength: 200,
+    },
+    {
+      count: 6,
+      image: Star3,
+      opacity: 0.3,
+      strength: 100,
+    }
+  ]
+}
