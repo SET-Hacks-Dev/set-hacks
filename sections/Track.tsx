@@ -6,6 +6,7 @@ import { media } from "../theme";
 
 type TrackProps = {
   heading: string;
+  subheading: string;
   text: string[];
   tracks: IconProps[];
   maxWidth?: string;
@@ -34,7 +35,8 @@ const LargeIcon = styled(Image)`
   height: 470px;
   max-height: 35vw;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 500;
   ${media.lg`display: block`};
 `;
@@ -71,13 +73,13 @@ const Icons = styled(Col)`
 
 const IconsText = styled(Text)`
   font-size: 80%;
-  font-weight: 550;
+  font-weight: 500;
   ${media.lg`font-size: 120%`};
-  ${media.lg`font-weight: bold`};
 `;
 
 const Track = ({
   heading,
+  subheading,
   text,
   tracks,
   maxWidth = "100%",
@@ -92,6 +94,7 @@ const Track = ({
         <Row className="row justify-content-md-center mb-4">
           <Col xs={12} lg={6} className="text-center mb-4" style={{ maxWidth }}>
             <Heading className="mb-4">{heading}</Heading>
+            <Text style={{ fontWeight: 500 }} text={subheading}/>
             {text &&
               text.map((line) => {
                 return <Text text={line} key={line} />;
@@ -110,7 +113,7 @@ const Track = ({
                   active={track.id === activeTrack ? 1 : 0}
                   onClick={() => setActiveTrack(track.id)}
                 >
-                  <Image src={track.icon} alt={track.title} fluid />
+                  <Image className="p-4" src={track.icon} alt={track.title} fluid />
                   <IconsText className="text-center mb-4" text={track.title} />
                 </Icons>
               );
@@ -118,10 +121,11 @@ const Track = ({
         </Row>
       </TrackWrapper>
       <TrackWrapper>
-        <Row>
+        <Row className="position-relative d-flex align-items-center">
           <Col xs={0} lg={3} />
           <Col xs={12} lg={9}>
             <LargeIcon
+              className="p-4"
               src={tracks[activeTrack].icon}
               alt={tracks[activeTrack].title}
               fluid

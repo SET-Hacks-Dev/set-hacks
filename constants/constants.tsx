@@ -159,13 +159,13 @@ export const EXPLORE_TERMINAL = {
         "Learn through others’ past experiences and regrets! You will have the opportunity to ask burning questions at an Ivy league panel, high school regrets panel to help you avoid them and industry professionals panel from your dream companies.",
     },
   ],
-  link: { label: "View full schedule →", href: "#" },
+  link: { label: "View full schedule →", href: "https://www.notion.so/sethacks/2021-Schedule-074c84aa1a184a84ba2b291311363540" },
 };
 
 export const TRACK = {
   heading: "🚊 Get on Track",
+  subheading: "Pre-hackathon | August 9-11",
   text: [
-    "Pre-hackathon | August 9-11",
     "Our six custom learning tracks, workshops and challenges help you truly understand major topics in tech, and prepare you to apply them to solve complex, interdisciplinary problems in the future.",
     "Each learning track has three, hour-long workshops, and one post-workshop do-it-yourself coding challenge.",
   ],

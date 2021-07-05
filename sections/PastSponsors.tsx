@@ -73,7 +73,7 @@ const PastSponsors = ({
               return (
                 <a key={sponsor.name} href={sponsor.link} target="_blank">
                   <Logos
-                    className="mx-2 my-4"
+                    className="m-4"
                     src={sponsor.image}
                     alt={sponsor.name}
                     height={gold.size.height}
@@ -88,7 +88,7 @@ const PastSponsors = ({
               return (
                 <a key={sponsor.name} href={sponsor.link} target="_blank">
                   <Logos
-                    className="mx-2 my-4"
+                    className="m-4"
                     src={sponsor.image}
                     alt={sponsor.name}
                     height={silver.size.height}
@@ -103,7 +103,7 @@ const PastSponsors = ({
               return (
                 <a key={sponsor.name} href={sponsor.link} target="_blank">
                   <Logos
-                    className="mx-2 my-4"
+                    className="m-4"
                     src={sponsor.image}
                     alt={sponsor.name}
                     height={bronze.size.height}
