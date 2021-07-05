@@ -31,7 +31,7 @@ const TrackWrapper = styled(Container)`
 const LargeIcon = styled(Image)`
   position: absolute;
   display: none;
-  height: 500px;
+  height: 470px;
   max-height: 35vw;
   left: 0;
   top: 0;
@@ -71,6 +71,7 @@ const Icons = styled(Col)`
 
 const IconsText = styled(Text)`
   font-size: 80%;
+  font-weight: 550;
   ${media.lg`font-size: 120%`};
   ${media.lg`font-weight: bold`};
 `;
