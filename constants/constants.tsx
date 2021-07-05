@@ -285,7 +285,7 @@ export const PAST_SPONSORS = {
     label: "Gold",
     size: {
       height: "12vh",
-      maxHeight: "80px",
+      maxHeight: "85px",
     },
     sponsors: [
       {
@@ -342,8 +342,8 @@ export const PAST_SPONSORS = {
   bronze: {
     label: "Bronze",
     size: {
-      height: "6vh",
-      maxHeight: "40px",
+      height: "5.5vh",
+      maxHeight: "35px",
     },
     sponsors: [
       {

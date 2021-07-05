@@ -64,7 +64,7 @@ const PastSponsors = ({
   return (
     <>
       <SponsorsWrapper dark={dark ? 1 : 0}>
-        <Row className="mb-2">
+        <Row className="mb-3 text-center">
           <Header text={header} />
         </Row>
         <Row className="text-center">
