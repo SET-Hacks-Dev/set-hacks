@@ -20,7 +20,7 @@ const colors = {
 const fonts = {
   sans: "Inter, system-ui, sans-serif",
   serif: "Georgia, serif",
-  mono: "Menlo, monospace",
+  mono: "Space Mono, monospace",
   heading: "Space Mono, monospace",
 };
 

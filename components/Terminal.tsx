@@ -46,7 +46,7 @@ const StyledPromptText = styled.p`
 const StyledCommandResult = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.mono};
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 0.5rem;
   opacity: 0.9;
 `;

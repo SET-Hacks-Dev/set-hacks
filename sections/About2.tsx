@@ -29,8 +29,8 @@ const About2Wrapper = styled(Container)`
 `;
 
 const Spaceship = styled(Image)`
-  left: -10%;
-  top: -10%;
+  left: -15%;
+  top: 20%;
   position: relative;
   ${media.lg`position: absolute`};
   ${media.lg`width: 60%!important;`};
