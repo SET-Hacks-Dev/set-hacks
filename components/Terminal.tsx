@@ -259,7 +259,7 @@ const Terminal = ({ heading, commands, link }: TerminalProps) => {
             </StyledFrame>
           </Row>
           <Row className="justify-content-center">
-            <Col style={{ maxWidth: 850 }}>
+            <Col style={{ maxWidth: 850 }} className="text-end">
               <Link href={link.href}>{link.label}</Link>
             </Col>
           </Row>
