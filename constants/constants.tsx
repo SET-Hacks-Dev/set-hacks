@@ -276,7 +276,7 @@ export const FAQ = {
           <>
             Message us at{" "}
             <Link href="mailto:hello@sethacks.ca">hello@sethacks.ca</Link> and
-            we&apos;ll get back to you!
+            we&apos;ll get back to you with an answer!
           </>
         ),
       },
@@ -308,7 +308,7 @@ export const CONTACT = {
   className: "d-flex align-items-left flex-column",
   post: (
     <TextChildren>
-      Send us an email{" "}
+      Send us an email at{" "}
       <Link href="mailto:hello@sethacks.ca">hello@sethacks.ca</Link>
     </TextChildren>
   ),
