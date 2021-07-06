@@ -104,7 +104,7 @@ export const ABOUT_2 = {
 };
 
 export const STORIES = {
-  heading: "📚 Join our community",
+  heading: "📚 Join *our community*",
   stories: [
     {
       name: "Sharon Peng",
@@ -285,7 +285,7 @@ export const FAQ = {
 };
 
 export const SPONSORS = {
-  heading: "🙌 Support our mission",
+  heading: "🙌 Support *our mission*",
   text: "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
   post: (
     <TextChildren>
