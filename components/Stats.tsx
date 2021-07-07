@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const borderColor = rgba(theme.colors.brand["800"], 0.05);
 
 const StyledContainer = styled(Container)`
+  color: ${theme.colors.white};
   margin-top: 7rem !important;
   margin-bottom: 7rem !important;
 `;
@@ -59,14 +60,13 @@ const StyledStat = styled.div`
 `;
 
 const Value = styled.h2`
-  color: ${theme.colors.brand["800"]};
   font-size: 50px;
   ${media.lg`font-size: 75px`};
   font-weight: 600;
+  font-family: ${theme.fonts.heading};
 `;
 
 const Label = styled.p`
-  color: ${theme.colors.brand["800"]};
   font-size: ${theme.fontSizes.md};
   ${media.lg`font-size: ${theme.fontSizes.lg}`};
   font-weight: 600;

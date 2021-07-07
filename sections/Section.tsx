@@ -1,5 +1,7 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import { ButtonProps, Heading, Text, Link, Button } from "../components";
+import styled from "styled-components";
+import theme from "../theme/theme";
 
 type SectionProps = {
   heading: string;
@@ -14,7 +16,18 @@ type SectionProps = {
   button?: ButtonProps;
   className?: string;
   reverse?: boolean;
+  dark?: boolean;
 };
+
+const SectionWrapper = styled(Container)`
+  > * {
+    color: ${(props) =>
+      props.dark
+        ? props.theme.colors.white
+        : props.theme.colors.brand[800]} !important;
+  }
+`;
+
 const Section = ({
   heading,
   text,
@@ -25,9 +38,10 @@ const Section = ({
   button,
   className = "",
   reverse = false,
+  dark = false,
 }: SectionProps) => {
   return (
-    <Container>
+    <SectionWrapper dark={dark ? 1 : 0}>
       <Row className="d-flex align-items-center">
         <Col
           xs={{ span: 12, order: reverse ? "last" : "first" }}
@@ -51,7 +65,7 @@ const Section = ({
           </Col>
         )}
       </Row>
-    </Container>
+    </SectionWrapper>
   );
 };
 

@@ -5,19 +5,23 @@ const colors = {
     // 200: "#d4ccf8",
     200: "#eae5ff",
     300: "#8d7dc8",
-    400: "#5243aa",
+    // 400: "#5243aa",
+    400: "#7969d7",
     500: "#463ba1",
     600: "#3a3597",
     700: "#282a87",
     800: "#221c48",
+    900: "#24185d",
   },
   secondary: "#ddf9ff",
+  secondaryVariant: "#17c6ea",
 };
 
 const fonts = {
   sans: "Inter, system-ui, sans-serif",
   serif: "Georgia, serif",
-  mono: "Menlo, monospace",
+  mono: "Space Mono, monospace",
+  heading: "Space Mono, monospace",
 };
 
 const fontSizes = {

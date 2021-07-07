@@ -37,8 +37,14 @@ export * from "./SocialMedia";
 export { default as Spacer } from "./Spacer";
 export * from "./Spacer";
 
+export {default as Star} from "./Star"
+export * from "./Star";
+
 export { default as Stats } from "./Stats";
 export * from "./Stats";
+
+export { default as Terminal } from "./Terminal";
+export * from "./Terminal";
 
 export { default as Text } from "./Text";
 export * from "./Text";

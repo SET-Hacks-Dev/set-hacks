@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { ArrowRight } from "react-feather";
 import Button from "./Button";
@@ -9,6 +9,10 @@ const StyledNavbar = styled(Navbar)`
   transform: translateY(${(props) => (props.show ? "0" : "-100%")});
   transition: 0.5s transform cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: ${({ theme }) => theme.colors.brand[200]};
+`;
+
+const Logo = styled(Image)`
+  height: 30px;
 `;
 
 const StyledBrand = styled(Navbar.Brand)`
@@ -80,7 +84,7 @@ const HNavbar = ({ brand, links, actionButton }: NavbarProps) => {
       show={active ? 1 : 0}
     >
       <Container>
-        <StyledBrand href="/">{render(brand)}</StyledBrand>
+        <StyledBrand className="justify-content-center" href="/"><Logo className="me-2" src="logo192.png"/>{render(brand)}</StyledBrand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
