@@ -32,7 +32,10 @@ import {
   Stats,
   Terminal,
   Tilted,
+  invertAccentColor,
 } from "../components";
+
+import { ThemeProvider } from "styled-components";
 
 const Index = () => {
   return (
@@ -42,7 +45,9 @@ const Index = () => {
       <Tilted>
         <Stars {...STARS}>
           <Anchor i="about" />
-          <About1 {...ABOUT_1} />
+          <ThemeProvider theme={invertAccentColor}>
+            <About1 {...ABOUT_1} />
+          </ThemeProvider>
           <Stats {...STATS} />
           <About2 {...ABOUT_2} />
           <Anchor i="track" />
