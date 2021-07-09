@@ -14,10 +14,7 @@ type DimProps = {
 
 const Stars = ({ id, tiers, children }: StarsProps) => {
   const [hasRendered, setHasRendered] = React.useState<boolean>(false);
-  const [dimensions, setDimensions] = React.useState<DimProps>({
-    height: window.innerHeight,
-    width: window.innerWidth,
-  });
+  const [dimensions, setDimensions] = React.useState<DimProps | null>();
 
   React.useEffect(() => {
     if (!hasRendered) setHasRendered(true);
@@ -28,7 +25,7 @@ const Stars = ({ id, tiers, children }: StarsProps) => {
         width: window.innerWidth,
       });
     };
-
+    handleResize();
     window.addEventListener("resize", handleResize);
   }, [hasRendered]);
 
