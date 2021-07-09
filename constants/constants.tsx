@@ -449,7 +449,7 @@ export const STARS = {
       count: 6,
       image: Star1,
       opacity: 0.5,
-      strength: 300,
+      strength: 400,
     },
     {
       count: 7,
@@ -461,7 +461,7 @@ export const STARS = {
       count: 8,
       image: Star3,
       opacity: 0.3,
-      strength: 100,
+      strength: 50,
     },
   ],
 };
