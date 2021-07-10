@@ -186,7 +186,7 @@ export const EXPLORE_TERMINAL = {
 
 export const TRACK = {
   heading: "🚊 Get on track to make your ideas a reality.",
-  subheading: "Pre-hackathon | August 9-11",
+  subheading: "Pre-hackathon | August 7-9",
   text: [
     "Our six learning tracks are customized to help you understand important topics in tech and learn how to apply them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
     "Each learning track is composed of an hour-long workshop each day from Monday to Wednesday, followed by a take-home challenge after the workshop.",
