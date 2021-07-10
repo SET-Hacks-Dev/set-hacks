@@ -10,6 +10,8 @@ const colors = {
     700: "#282a87",
     800: "#221c48",
     900: "#24185d",
+    1000: "#ffd498",
+    1100: "#c14038",
   },
   secondary: "#ddf9ff",
   secondaryVariant: "#17c6ea",
