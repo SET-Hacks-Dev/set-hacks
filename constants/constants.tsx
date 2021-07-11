@@ -448,7 +448,7 @@ export const STARS = {
     {
       count: 6,
       image: Star1,
-      opacity: 0.5,
+      opacity: 0.3,
       strength: 400,
     },
     {
