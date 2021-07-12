@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import { media, theme } from "../theme";
 import { darken } from "polished";
+import { media } from "../theme";
+import styled from "styled-components";
 
 const StyledLink = styled.a`
-  color: ${theme.colors.brand["400"]} !important;
+  color: ${({ theme }) => theme.colors.brand["400"]} !important;
   text-decoration: none !important;
-  font-size: ${theme.fontSizes.md};
+  font-size: ${({ theme }) => theme.fontSizes.md};
   font-weight: 500;
-  ${media.sm`font-size: ${theme.fontSizes.lg}`};
+  ${media.sm`font-size: ${({ theme }) => theme.fontSizes.lg}`};
   transition: 0.4s all ease;
   position: relative;
 
@@ -18,14 +18,14 @@ const StyledLink = styled.a`
     height: 0.1rem;
     bottom: -0.25rem;
     left: 0;
-    background-color: ${theme.colors.brand["400"]};
+    background-color: ${({ theme }) => theme.colors.brand["400"]};
     visibility: visible;
     transform: scaleX(1);
     transition: all 0.3s ease-in-out 0s;
   }
 
   &:hover {
-    color: ${darken(0.05, theme.colors.brand[400])};
+    color: ${({ theme }) => darken(0.05, theme.colors.brand[400])};
 
     &::before {
       visibility: hidden;

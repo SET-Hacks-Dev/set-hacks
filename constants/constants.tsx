@@ -6,7 +6,7 @@ import {
   Instagram,
   MapPin,
 } from "react-feather";
-import { Link, TextChildren, Text } from "../components";
+import { Link, Text, TextChildren } from "../components";
 
 import Star1 from "../public/img/stars/t1.png";
 import Star2 from "../public/img/stars/t2.png";
@@ -446,22 +446,22 @@ export const STARS = {
   id: "bg-stars",
   tiers: [
     {
-      count: 4,
+      count: 6,
       image: Star1,
-      opacity: 0.5,
-      strength: 300,
+      opacity: 0.1,
+      strength: 400,
     },
     {
-      count: 5,
+      count: 7,
       image: Star2,
-      opacity: 0.4,
+      opacity: 0.2,
       strength: 200,
     },
     {
-      count: 6,
+      count: 8,
       image: Star3,
-      opacity: 0.3,
-      strength: 100,
+      opacity: 0.6,
+      strength: 50,
     },
   ],
 };

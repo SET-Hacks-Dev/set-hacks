@@ -1,6 +1,6 @@
 # SET.Hacks() 2021 Website
 
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=set-hacks)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=set-hacks-tan)
 
 ## About
 The SET.Hacks() 2021 website, built with React.
