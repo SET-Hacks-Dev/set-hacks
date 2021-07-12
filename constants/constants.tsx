@@ -61,7 +61,7 @@ export const HOME = {
 };
 
 export const ABOUT_1 = {
-  heading: "👉 You don’t need to be a ~coding whiz to be a hacker.~",
+  heading: "👉 You don’t need to be a coding whiz to be ~a hacker.~",
   text: "SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With six guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech.",
   post: (
     <TextChildren>
@@ -104,7 +104,7 @@ export const ABOUT_2 = {
 };
 
 export const STORIES = {
-  heading: "~📚 Join our community~",
+  heading: "📚 Join ~our community~",
   stories: [
     {
       name: "Sharon Peng",
@@ -147,7 +147,7 @@ export const STORIES = {
 };
 
 export const EXPLORE_TERMINAL = {
-  heading: "💫 Explore hacking weekend",
+  heading: "💫 Explore ~hacking weekend~",
   commands: [
     {
       name: "ls",
@@ -185,7 +185,7 @@ export const EXPLORE_TERMINAL = {
 };
 
 export const TRACK = {
-  heading: "🚊 Get on track to ~make your ideas a reality.~",
+  heading: "🚊 Get ~on track~ to make your ideas a reality.",
   subheading: "Pre-hackathon | August 9-11",
   text: [
     "Our six learning tracks are customized to help you understand important topics in tech and learn how to apply them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
@@ -233,7 +233,7 @@ export const TRACK = {
 };
 
 export const FAQ = {
-  heading: "~💡 Frequently asked questions~",
+  heading: "💡 Frequently asked ~questions~",
   left_bar: {
     heading: "",
     questions: [
@@ -285,7 +285,7 @@ export const FAQ = {
 };
 
 export const SPONSORS = {
-  heading: "~🙌 Support our mission~",
+  heading: "🙌 Support ~our mission~",
   text: "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
   post: (
     <TextChildren>
@@ -304,7 +304,7 @@ export const SPONSORS = {
   image: "/img/section-graphic/sponsor.png",
 };
 export const CONTACT = {
-  heading: "~📧 Still have a question?~",
+  heading: "📧 Still have a question?",
   className: "d-flex align-items-left flex-column",
   post: (
     <TextChildren>

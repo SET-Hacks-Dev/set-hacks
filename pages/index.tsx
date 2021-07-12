@@ -44,9 +44,9 @@ const Index = () => {
       <Navbar {...NAVIGATION} />
       <Hero />
       <Tilted>
-        <Stars {...STARS}>
-          <Anchor i="about" />
-          <ThemeProvider theme={invertHighlightColor}>
+        <ThemeProvider theme={invertHighlightColor}>
+          <Stars {...STARS}>
+            <Anchor i="about" />
             <ThemeProvider theme={invertAccentColor}>
               <About1 {...ABOUT_1} />
             </ThemeProvider>
@@ -56,11 +56,11 @@ const Index = () => {
             <Spacer sz={14} />
             <Track {...TRACK} />
             <Spacer sz={14} />
-          </ThemeProvider>
-        </Stars>
-        <Anchor i="t-hist" />
-        <Spacer sz={8} />
-        <Terminal {...EXPLORE_TERMINAL} />
+          </Stars>
+          <Anchor i="t-hist" />
+          <Spacer sz={8} />
+          <Terminal {...EXPLORE_TERMINAL} />
+        </ThemeProvider>
         <Anchor i="stories" />
         <Spacer sz={14} />
         <Stories {...STORIES} />
