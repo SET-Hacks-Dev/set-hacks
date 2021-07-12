@@ -315,7 +315,7 @@ export const CONTACT = {
 };
 
 export const PAST_SPONSORS = {
-  header: "2020 Sponsors",
+  header: "2020 Sponsors & Partners",
   gold: {
     label: "Gold",
     size: {
