@@ -448,19 +448,19 @@ export const STARS = {
     {
       count: 6,
       image: Star1,
-      opacity: 0.3,
+      opacity: 0.1,
       strength: 400,
     },
     {
       count: 7,
       image: Star2,
-      opacity: 0.4,
+      opacity: 0.2,
       strength: 200,
     },
     {
       count: 8,
       image: Star3,
-      opacity: 0.3,
+      opacity: 0.6,
       strength: 50,
     },
   ],
