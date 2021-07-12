@@ -1,5 +1,12 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
-import { ButtonProps, Heading, Text, Link, Button } from "../components";
+import {
+  ButtonProps,
+  Heading,
+  Text,
+  Link,
+  Button,
+  render,
+} from "../components";
 import styled from "styled-components";
 
 type About1Props = {
@@ -60,7 +67,12 @@ const About1 = ({
         </Col>
         {image && (
           <Col xs={12} lg={6} className={"d-flex justify-content-center"}>
-            <Image className="w-75 p-4 my-4 my-lg-0" src={image} alt={heading + " Graphic"} fluid />
+            <Image
+              className="w-75 p-4 my-4 my-lg-0"
+              src={image}
+              alt={heading + " Graphic"}
+              fluid
+            />
           </Col>
         )}
       </Row>
