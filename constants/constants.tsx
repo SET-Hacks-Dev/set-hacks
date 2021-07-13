@@ -143,6 +143,15 @@ export const STORIES = {
         "SET.Hacks() was an amazing experience to work with others and learn new technical skills. The addition of resources provided by the SET team allowed myself to work with technologies I hadn't used before. They gave great mentorship during the competition and helped with any issues I had during it. Thank you for the great experience.",
       headshot: "vansh.png",
     },
+    {
+      name: "Max Huang",
+      school: "University of Waterloo",
+      project: "Tumbleweed GO",
+      link: "https://devpost.com/software/tumbleweed-go",
+      quote:
+        "I greatly enjoyed participating in SET.Hacks(). It was very well organized and executed, and the organizers clearly put a lot of thought and passion into planning the event. I would recommend anyone interested — especially first-time hackers — to give SET.Hacks() a try.",
+      headshot: "max.png",
+    },
   ],
 };
 
