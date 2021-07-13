@@ -1,4 +1,4 @@
-import { Accent, Chip, Heading, SocialMedia } from "../components";
+import { Accent, Chip, Heading, SocialMedia, render } from "../components";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { media, theme } from "../theme";
@@ -32,7 +32,7 @@ const Hero = () => {
           lg={6}
           className="d-flex align-items-center justify-content-end"
         >
-          <Rocket className = "p-3 me-5" src={HOME.image} alt="Hero" fluid />
+          <Rocket className="p-3 me-5" src={HOME.image} alt="Hero" fluid />
         </Col>
         <Col xs={12} lg={6} className="d-flex align-items-center">
           <div className="w-100 d-flex justify-content-center flex-column">
@@ -45,7 +45,7 @@ const Hero = () => {
                 />
               </Accent>
               <br />
-              {HOME.lead.content}
+              {render(HOME.lead.content)}
             </Heading>
             <div className="mt-3 w-100 d-flex justify-content-begin">
               {HOME.chips.map((chip) => (
