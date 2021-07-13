@@ -1,8 +1,16 @@
-import { Accent, Chip, Heading, SocialMedia, render } from "../components";
+import {
+  Accent,
+  Chip,
+  Heading,
+  SocialMedia,
+  render,
+  Button,
+} from "../components";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { media, theme } from "../theme";
 import { HOME } from "../constants";
+import { ArrowRight } from "react-feather";
 import MailingList from "./MailingList";
 import Typical from "react-typical";
 
@@ -22,6 +30,10 @@ const Rocket = styled(Image)`
   max-height: 80vh;
   ${media.lg`display: block`};
 `;
+
+// const Apply = styled.div`
+//   ${media.lg`display: none`};
+// `;
 
 const Hero = () => {
   return (
@@ -52,11 +64,22 @@ const Hero = () => {
                 <Chip {...chip} key={chip.label} />
               ))}
             </div>
-
-            <div className="w-100 mt-4">
-              <MailingList />
+            <div className="w-100 mt-2 mb-3">
+              {HOME.text.map((text) => {
+                return <div key={text}>{render(text)}</div>;
+              })}
             </div>
-            <div className="w-100 mt-5 d-flex">
+            <div className="w-100 my-4">
+              <Button
+                {...HOME.apply.actionButton}
+                isLink={true}
+                rightIcon={ArrowRight}
+              />
+            </div>
+            {/* <div className="w-100 mt-2">
+              <MailingList />
+            </div> */}
+            <div className="w-100 mt-4 d-flex">
               {HOME.socialMedia.map((social) => (
                 <SocialMedia {...social} key={social.url} />
               ))}
