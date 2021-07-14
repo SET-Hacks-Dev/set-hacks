@@ -46,14 +46,14 @@ const Index = () => {
       <Tilted>
         <ThemeProvider theme={invertHighlightColor}>
           <Stars {...STARS}>
-            <Anchor i="about" />
             <ThemeProvider theme={invertAccentColor}>
+              <Anchor i="about" />
               <About1 {...ABOUT_1} />
+              <Stats {...STATS} />
+              <About2 {...ABOUT_2} />
+              <Anchor i="track" />
+              <Spacer sz={14} />
             </ThemeProvider>
-            <Stats {...STATS} />
-            <About2 {...ABOUT_2} />
-            <Anchor i="track" />
-            <Spacer sz={14} />
             <Track {...TRACK} />
             <Spacer sz={14} />
           </Stars>

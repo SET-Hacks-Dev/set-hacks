@@ -57,7 +57,7 @@ const About1 = ({
         >
           <Heading className={"mb-4"}>{heading}</Heading>
           {text && <Text text={text} />}
-          {post && post}
+          {post && <Text text={post} />}
           {link && <Link href={link.href}>{link.label}</Link>}
           {button && (
             <div className={"pt-4"}>

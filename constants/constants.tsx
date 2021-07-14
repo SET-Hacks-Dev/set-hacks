@@ -73,14 +73,7 @@ export const HOME = {
 export const ABOUT_1 = {
   heading: "👉 You don’t need to be a coding whiz to be ~a hacker.~",
   text: "SET.Hacks() is a *beginner-focused*, high school hackathon that empowers every student to start coding the future. With six guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech.",
-  post: (
-    <TextChildren>
-      Over three days of pre-hackathon workshops and 48 hours of hacking, we'll
-      equip you with everything you need on your mission. Regardless of your
-      experience or background, we want to see your ideas and help you bring
-      them to life!
-    </TextChildren>
-  ),
+  post: "Over three days of pre-hackathon workshops and *48 hours* of hacking, we'll equip you with everything you need on your mission. Regardless of your experience or background, we want to see your ideas and help you bring hem to life!",
   image: "/img/section-graphic/hexagon.png",
   link: {
     label: "View 2020 Devpost submissions →",
@@ -101,7 +94,7 @@ export const STATS = {
 
 export const ABOUT_2 = {
   heading: "🚀 You can build solutions for the ~biggest problems of tomorrow.~",
-  text: "The future is in your hands, and the possibilities are endless. From quirky apps to complex algorithms, we want you to build something impactful for years to come. Challenge prompts come out the day of the hackathon, where you’ll get the chance to work on a problem faced by someone from the future. ",
+  text: "The future is in your hands, and the possibilities are *endless.* From quirky apps to complex algorithms, we want you to build something *impactful* for years to come. Challenge prompts come out the day of the hackathon, where you’ll get the chance to work on a problem faced by someone from the future. ",
   post: (
     <TextChildren>
       We can’t wait to see what exciting new solutions you come up with!
@@ -207,8 +200,8 @@ export const TRACK = {
   heading: "🚊 Get ~on track~ to make your ideas a reality.",
   subheading: "Pre-hackathon | August 9-11",
   text: [
-    "Our six learning tracks are customized to help you understand important topics in tech and learn how to apply them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
-    "Each learning track is composed of an hour-long workshop each day from Monday to Wednesday, followed by a take-home challenge after the workshop.",
+    "Our six learning tracks are customized to help you *understand* important topics in tech and learn how to *apply* them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
+    "Each learning track is composed of an hour-long *workshop* each day from Monday to Wednesday, followed by a take-home *challenge* after the workshop.",
   ],
   tracks: [
     {

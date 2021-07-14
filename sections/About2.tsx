@@ -70,11 +70,7 @@ const About2 = ({
           </Col>
         </Row>
       </About2Wrapper>
-      <Spaceship
-        src={image}
-        alt={heading + " Graphic"}
-        fluid
-      />
+      <Spaceship src={image} alt={heading + " Graphic"} fluid />
     </div>
   );
 };
