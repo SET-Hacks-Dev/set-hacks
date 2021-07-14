@@ -40,7 +40,10 @@ export const NAVIGATION = {
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ],
-  actionButton: { label: "Apply now", target: "" },
+  actionButton: {
+    label: "Apply now",
+    target: "https://0nvxc8nc62u.typeform.com/hacker-app",
+  },
 };
 
 export const HOME = {
@@ -59,7 +62,10 @@ export const HOME = {
   ],
   image: "/img/section-graphic/rocket.png",
   apply: {
-    actionButton: { label: "Apply now", target: "" },
+    actionButton: {
+      label: "Apply now",
+      target: "https://0nvxc8nc62u.typeform.com/hacker-app",
+    },
   },
   text: ["A high school hackathon to kickstart", "your journey into tech."],
 };
