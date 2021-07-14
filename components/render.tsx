@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Accent = styled.span`
   color: ${({ theme }) => theme.colors.brand[400]};
+  font-weight: 600;
 `;
 
 export const Highlight = styled.span<{ active: number }>`
@@ -29,20 +30,10 @@ const render = (text: string) => {
     else if (text[i] === "*") accent = !accent;
     else {
       if (accent) {
-        jsxMap.push(
-          <Accent key={hashString(text[i])}>
-            <Highlight style={{ fontWeight: 600 }} active={highlight ? 1 : 0}>
-              {text[i]}
-            </Highlight>
-          </Accent>
-        );
+        jsxMap.push(<Accent key={hashString(text[i])}>{text[i]}</Accent>);
       } else {
         jsxMap.push(
-          <Highlight
-            key={hashString(text[i])}
-            style={{ fontWeight: 600 }}
-            active={highlight ? 1 : 0}
-          >
+          <Highlight key={hashString(text[i])} active={highlight ? 1 : 0}>
             {text[i]}
           </Highlight>
         );

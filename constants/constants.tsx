@@ -66,7 +66,7 @@ export const HOME = {
 
 export const ABOUT_1 = {
   heading: "👉 You don’t need to be a coding whiz to be ~a hacker.~",
-  text: "SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With six guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech.",
+  text: "SET.Hacks() is a *beginner-focused*, high school hackathon that empowers every student to start coding the future. With six guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech.",
   post: (
     <TextChildren>
       Over three days of pre-hackathon workshops and 48 hours of hacking, we'll
