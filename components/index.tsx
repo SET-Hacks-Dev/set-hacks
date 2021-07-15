@@ -37,7 +37,7 @@ export * from "./SocialMedia";
 export { default as Spacer } from "./Spacer";
 export * from "./Spacer";
 
-export {default as Star} from "./Star"
+export { default as Star } from "./Star";
 export * from "./Star";
 
 export { default as Stats } from "./Stats";
@@ -48,6 +48,8 @@ export * from "./Terminal";
 
 export { default as Text } from "./Text";
 export * from "./Text";
+
+export * from "./Themes";
 
 export { default as Tilted } from "./Tilted";
 export * from "./Tilted";

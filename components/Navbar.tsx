@@ -84,19 +84,22 @@ const HNavbar = ({ brand, links, actionButton }: NavbarProps) => {
       show={active ? 1 : 0}
     >
       <Container>
-        <StyledBrand className="justify-content-center" href="/"><Logo className="me-2" src="logo192.png"/>{render(brand)}</StyledBrand>
+        <StyledBrand className="justify-content-center" href="/">
+          <Logo className="me-2" src="logo192.png" />
+          {render(brand)}
+        </StyledBrand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="mx-auto">
             {links.map((link: NavItemProps) => (
               <StyledNavLink key={link.href} href={link.href}>
                 {link.label}
               </StyledNavLink>
             ))}
           </Nav>
-          {/* <div className="mt-lg-0 mt-3 mb-3 mb-lg-0">
+          <div className="mt-lg-0 mt-3 mb-3 mb-lg-0">
             <Button {...actionButton} isLink={true} rightIcon={ArrowRight} />
-          </div> */}
+          </div>
         </Navbar.Collapse>
       </Container>
     </StyledNavbar>

@@ -1,8 +1,16 @@
-import { Accent, Chip, Heading, SocialMedia } from "../components";
+import {
+  Accent,
+  Chip,
+  Heading,
+  SocialMedia,
+  render,
+  Button,
+} from "../components";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { media, theme } from "../theme";
 import { HOME } from "../constants";
+import { ArrowRight } from "react-feather";
 import MailingList from "./MailingList";
 import Typical from "react-typical";
 
@@ -23,6 +31,10 @@ const Rocket = styled(Image)`
   ${media.lg`display: block`};
 `;
 
+// const Apply = styled.div`
+//   ${media.lg`display: none`};
+// `;
+
 const Hero = () => {
   return (
     <StyledContainer>
@@ -32,7 +44,7 @@ const Hero = () => {
           lg={6}
           className="d-flex align-items-center justify-content-end"
         >
-          <Rocket className = "p-3 me-5" src={HOME.image} alt="Hero" fluid />
+          <Rocket className="p-3 me-5" src={HOME.image} alt="Hero" fluid />
         </Col>
         <Col xs={12} lg={6} className="d-flex align-items-center">
           <div className="w-100 d-flex justify-content-center flex-column">
@@ -45,18 +57,29 @@ const Hero = () => {
                 />
               </Accent>
               <br />
-              {HOME.lead.content}
+              {render(HOME.lead.content)}
             </Heading>
             <div className="mt-3 w-100 d-flex justify-content-begin">
               {HOME.chips.map((chip) => (
                 <Chip {...chip} key={chip.label} />
               ))}
             </div>
-
-            <div className="w-100 mt-4">
-              <MailingList />
+            <div className="w-100 mt-2 mb-3">
+              {HOME.text.map((text) => {
+                return <div key={text}>{render(text)}</div>;
+              })}
             </div>
-            <div className="w-100 mt-5 d-flex">
+            <div className="w-100 my-4">
+              <Button
+                {...HOME.apply.actionButton}
+                isLink={true}
+                rightIcon={ArrowRight}
+              />
+            </div>
+            {/* <div className="w-100 mt-2">
+              <MailingList />
+            </div> */}
+            <div className="w-100 mt-4 d-flex">
               {HOME.socialMedia.map((social) => (
                 <SocialMedia {...social} key={social.url} />
               ))}

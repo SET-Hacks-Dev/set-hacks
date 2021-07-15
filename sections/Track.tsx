@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Col, Container, Row, Image, Card } from "react-bootstrap";
-import { Heading, Text, Link } from "../components";
-import styled from "styled-components";
+import { Heading, Text, Link, invertAccentColor } from "../components";
+import styled, { ThemeProvider } from "styled-components";
 import { media } from "../theme";
 
 type TrackProps = {
@@ -90,36 +90,52 @@ const Track = ({
 
   return (
     <>
-      <TrackWrapper dark={dark ? 1 : 0}>
-        <Row className="row justify-content-md-center mb-4">
-          <Col xs={12} lg={6} className="text-center mb-4" style={{ maxWidth }}>
-            <Heading className="mb-4">{heading}</Heading>
-            <Text style={{ fontWeight: 500 }} text={subheading}/>
-            {text &&
-              text.map((line) => {
-                return <Text text={line} key={line} />;
+      <ThemeProvider theme={invertAccentColor}>
+        <TrackWrapper dark={dark ? 1 : 0}>
+          <Row className="row justify-content-md-center mb-4">
+            <Col
+              xs={12}
+              lg={6}
+              className="text-center mb-4"
+              style={{ maxWidth }}
+            >
+              <Heading className="mb-4">{heading}</Heading>
+              <Text style={{ fontWeight: 500 }} text={subheading} />
+              {text &&
+                text.map((line) => {
+                  return <Text text={line} key={line} />;
+                })}
+            </Col>
+          </Row>
+          <Row className="row justify-content-md-center mb-5">
+            {tracks &&
+              tracks.map((track) => {
+                return (
+                  <Icons
+                    xs={4}
+                    lg={2}
+                    style={{ maxWidth }}
+                    key={track.id}
+                    active={track.id === activeTrack ? 1 : 0}
+                    onClick={() => setActiveTrack(track.id)}
+                  >
+                    <Image
+                      className="p-4"
+                      src={track.icon}
+                      alt={track.title}
+                      fluid
+                    />
+                    <IconsText
+                      className="text-center mb-4"
+                      text={track.title}
+                    />
+                  </Icons>
+                );
               })}
-          </Col>
-        </Row>
-        <Row className="row justify-content-md-center mb-5">
-          {tracks &&
-            tracks.map((track) => {
-              return (
-                <Icons
-                  xs={4}
-                  lg={2}
-                  style={{ maxWidth }}
-                  key={track.id}
-                  active={track.id === activeTrack ? 1 : 0}
-                  onClick={() => setActiveTrack(track.id)}
-                >
-                  <Image className="p-4" src={track.icon} alt={track.title} fluid />
-                  <IconsText className="text-center mb-4" text={track.title} />
-                </Icons>
-              );
-            })}
-        </Row>
-      </TrackWrapper>
+          </Row>
+        </TrackWrapper>
+      </ThemeProvider>
+
       <TrackWrapper>
         <Row className="position-relative d-flex align-items-center">
           <Col xs={0} lg={3} />

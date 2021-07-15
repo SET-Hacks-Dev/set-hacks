@@ -6,7 +6,7 @@ import {
   Instagram,
   MapPin,
 } from "react-feather";
-import { Link, TextChildren, Text } from "../components";
+import { Link, Text, TextChildren } from "../components";
 
 import Star1 from "../public/img/stars/t1.png";
 import Star2 from "../public/img/stars/t2.png";
@@ -40,13 +40,16 @@ export const NAVIGATION = {
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ],
-  actionButton: { label: "Apply now", target: "" },
+  actionButton: {
+    label: "Apply now",
+    target: "https://0nvxc8nc62u.typeform.com/hacker-app",
+  },
 };
 
 export const HOME = {
   lead: {
     actions: ["🎨 Design", 1000, "🌎 Change", 1000, "💻 Code", 1000],
-    content: "the future.",
+    content: "~the future.~",
   },
   chips: [
     { icon: MapPin, label: "Virtual" },
@@ -58,19 +61,19 @@ export const HOME = {
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
   image: "/img/section-graphic/rocket.png",
+  apply: {
+    actionButton: {
+      label: "Apply now",
+      target: "https://0nvxc8nc62u.typeform.com/hacker-app",
+    },
+  },
+  text: ["A high school hackathon to kickstart", "your journey into tech."],
 };
 
 export const ABOUT_1 = {
-  heading: "👉 You don’t need to be a coding whiz to be a hacker.",
-  text: "SET.Hacks() is a beginner-focused, high school hackathon that empowers every student to start coding the future. With six guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech.",
-  post: (
-    <TextChildren>
-      Over three days of pre-hackathon workshops and 48 hours of hacking, we'll
-      equip you with everything you need on your mission. Regardless of your
-      experience or background, we want to see your ideas and help you bring
-      them to life!
-    </TextChildren>
-  ),
+  heading: "👉 You don’t need to be a coding whiz to be ~a hacker.~",
+  text: "SET.Hacks() is a *beginner-focused*, high school hackathon that empowers every student to start coding the future. With six guided learning tracks, 40+ mentors and university panels, we want to help kickstart students' journeys into tech.",
+  post: "Over three days of pre-hackathon workshops and *48 hours* of hacking, we'll equip you with everything you need on your mission. Regardless of your experience or background, we want to see your ideas and help you bring hem to life!",
   image: "/img/section-graphic/hexagon.png",
   link: {
     label: "View 2020 Devpost submissions →",
@@ -90,8 +93,8 @@ export const STATS = {
 };
 
 export const ABOUT_2 = {
-  heading: "🚀 You can build solutions for the biggest problems of tomorrow.",
-  text: "The future is in your hands, and the possibilities are endless. From quirky apps to complex algorithms, we want you to build something impactful for years to come. Challenge prompts come out the day of the hackathon, where you’ll get the chance to work on a problem faced by someone from the future. ",
+  heading: "🚀 You can build solutions for the ~biggest problems of tomorrow.~",
+  text: "The future is in your hands, and the possibilities are *endless.* From quirky apps to complex algorithms, we want you to build something *impactful* for years to come. Challenge prompts come out the day of the hackathon, where you’ll get the chance to work on a problem faced by someone from the future. ",
   post: (
     <TextChildren>
       We can’t wait to see what exciting new solutions you come up with!
@@ -104,7 +107,7 @@ export const ABOUT_2 = {
 };
 
 export const STORIES = {
-  heading: "📚 Join our community",
+  heading: "📚 Join ~our community~",
   stories: [
     {
       name: "Sharon Peng",
@@ -143,11 +146,20 @@ export const STORIES = {
         "SET.Hacks() was an amazing experience to work with others and learn new technical skills. The addition of resources provided by the SET team allowed myself to work with technologies I hadn't used before. They gave great mentorship during the competition and helped with any issues I had during it. Thank you for the great experience.",
       headshot: "vansh.png",
     },
+    {
+      name: "Max Huang",
+      school: "University of Waterloo",
+      project: "Tumbleweed GO",
+      link: "https://devpost.com/software/tumbleweed-go",
+      quote:
+        "I greatly enjoyed participating in SET.Hacks(). It was very well organized and executed, and the organizers clearly put a lot of thought and passion into planning the event. I would recommend anyone interested — especially first-time hackers — to give SET.Hacks() a try.",
+      headshot: "max.png",
+    },
   ],
 };
 
 export const EXPLORE_TERMINAL = {
-  heading: "💫 Explore hacking weekend",
+  heading: "💫 Explore ~hacking weekend~",
   commands: [
     {
       name: "ls",
@@ -185,11 +197,11 @@ export const EXPLORE_TERMINAL = {
 };
 
 export const TRACK = {
-  heading: "🚊 Get on track to make your ideas a reality.",
-  subheading: "Pre-hackathon | August 7-9",
+  heading: "🚊 Get ~on track~ to make your ideas a reality.",
+  subheading: "Pre-hackathon | August 9-11",
   text: [
-    "Our six learning tracks are customized to help you understand important topics in tech and learn how to apply them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
-    "Each learning track is composed of an hour-long workshop each day from Monday to Wednesday, followed by a take-home challenge after the workshop.",
+    "Our six learning tracks are customized to help you *understand* important topics in tech and learn how to *apply* them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
+    "Each learning track is composed of an hour-long *workshop* each day from Monday to Wednesday, followed by a take-home *challenge* after the workshop.",
   ],
   tracks: [
     {
@@ -233,7 +245,7 @@ export const TRACK = {
 };
 
 export const FAQ = {
-  heading: "💡 Frequently asked questions",
+  heading: "💡 Frequently asked ~questions~",
   left_bar: {
     heading: "",
     questions: [
@@ -285,7 +297,7 @@ export const FAQ = {
 };
 
 export const SPONSORS = {
-  heading: "🙌 Support our mission",
+  heading: "🙌 Support ~our mission~",
   text: "A big thank you to all the organizations who make this event possible! It’s people like you that inspire us to keep going. Stay tuned as we announce our 2021 sponsors!",
   post: (
     <TextChildren>
@@ -315,7 +327,7 @@ export const CONTACT = {
 };
 
 export const PAST_SPONSORS = {
-  header: "2020 Sponsors",
+  header: "2020 Sponsors & Partners",
   gold: {
     label: "Gold",
     size: {
@@ -446,22 +458,22 @@ export const STARS = {
   id: "bg-stars",
   tiers: [
     {
-      count: 4,
+      count: 6,
       image: Star1,
-      opacity: 0.5,
-      strength: 300,
+      opacity: 0.1,
+      strength: 400,
     },
     {
-      count: 5,
+      count: 7,
       image: Star2,
-      opacity: 0.4,
+      opacity: 0.2,
       strength: 200,
     },
     {
-      count: 6,
+      count: 8,
       image: Star3,
-      opacity: 0.3,
-      strength: 100,
+      opacity: 0.6,
+      strength: 50,
     },
   ],
 };
