@@ -3,6 +3,7 @@ import { Col, Container, Row, Image, Card } from "react-bootstrap";
 import { Heading, Text, Link, invertAccentColor } from "../components";
 import styled, { ThemeProvider } from "styled-components";
 import { media } from "../theme";
+import { hashString } from "react-hash-string";
 
 type TrackProps = {
   heading: string;
@@ -77,6 +78,23 @@ const IconsText = styled(Text)`
   ${media.lg`font-size: 120%`};
 `;
 
+const Accent = styled.span`
+  color: ${({ theme }) => theme.colors.brand[400]};
+  font-weight: 600;
+`;
+
+const render = (text: string) => {
+  let textMap = text.split("*");
+  let jsxMap = [];
+  for (let i = 0; i < textMap.length; i++) {
+    if (i % 2 === 0)
+      jsxMap.push(<span key={hashString(textMap[i])}>{textMap[i]}</span>);
+    else
+      jsxMap.push(<Accent key={hashString(textMap[i])}>{textMap[i]}</Accent>);
+  }
+  return <>{jsxMap}</>;
+};
+
 const Track = ({
   heading,
   subheading,
@@ -135,7 +153,6 @@ const Track = ({
           </Row>
         </TrackWrapper>
       </ThemeProvider>
-
       <TrackWrapper>
         <Row className="position-relative d-flex align-items-center">
           <Col xs={0} lg={3} />
@@ -152,11 +169,14 @@ const Track = ({
                 text={tracks[activeTrack].title}
                 style={{ fontWeight: "bold", fontSize: "180%" }}
               />
-              <Text
+              {/* <Text
                 className="mb-4"
                 text={tracks[activeTrack].info}
                 style={{ fontSize: "120%" }}
-              />
+              /> */}
+              <div className="mb-4" style={{ fontSize: "120%" }}>
+                {render(tracks[activeTrack].info)}
+              </div>
               <Row className="mt-auto">
                 <Col xs={12} lg={6}>
                   {activeTrack - 1 >= 0 && (
