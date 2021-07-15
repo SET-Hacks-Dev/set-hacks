@@ -34,7 +34,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           property="og:image"
-          content="https://user-images.githubusercontent.com/65046640/124403920-a1dba200-dd06-11eb-8c72-fc2f2e1e26e3.png"
+          content="https://www.sethacks.ca/preview.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -49,7 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           property="twitter:image"
-          content="https://user-images.githubusercontent.com/65046640/124403920-a1dba200-dd06-11eb-8c72-fc2f2e1e26e3.png"
+          content="https://www.sethacks.ca/preview.png"
         />
 
         <link rel="icon" href="favicon.ico" />
