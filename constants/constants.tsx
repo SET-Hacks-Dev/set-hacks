@@ -57,7 +57,7 @@ export const HOME = {
   ],
   socialMedia: [
     { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
-    { icon: Instagram, url: "https://www.instagram.com/set.ottawa/" },
+    { icon: Instagram, url: "https://www.instagram.com/setnational/" },
     { icon: Devpost, url: "https://set-hacks.devpost.com" },
   ],
   image: "/img/section-graphic/rocket.png",
@@ -422,7 +422,7 @@ export const FOOTER = {
   ],
   social: [
     { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
-    { icon: Instagram, url: "https://www.instagram.com/set.ottawa/" },
+    { icon: Instagram, url: "https://www.instagram.com/setnational/" },
   ],
   groups: [
     {
