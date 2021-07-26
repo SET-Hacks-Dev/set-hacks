@@ -326,13 +326,78 @@ export const CONTACT = {
   ),
 };
 
+export const CURRENT_SPONSORS = {
+  header: "Sponsors & Partners",
+  gold: {
+    label: "Gold",
+    size: {
+      height: "30vh",
+      maxHeight: "200px",
+    },
+    sponsors: [
+      {
+        name: "Distributed Compute Labs",
+        link: "https://distributed.computer/",
+        image: "img/sponsors/current/DCL.png",
+      },
+      {
+        name: "#RisingYouth",
+        link: "https://www.risingyouth.ca/",
+        image: "img/sponsors/current/RisingYouth.png",
+      },
+    ],
+  },
+  silver: {
+    label: "Silver",
+    size: {
+      height: "10vh",
+      maxHeight: "65px",
+    },
+    sponsors: [],
+  },
+  bronze: {
+    label: "Bronze",
+    size: {
+      height: "9vh",
+      maxHeight: "60px",
+    },
+    sponsors: [
+      {
+        name: "Repl.It",
+        link: "https://repl.it/",
+        image: "img/sponsors/current/Repl.it.png",
+      },
+      {
+        name: "RStudio",
+        link: "https://www.rstudio.com/",
+        image: "img/sponsors/current/RStudio.png",
+      },
+      {
+        name: "Hack the North",
+        link: "https://hackthenorth.com/",
+        image: "img/sponsors/current/HTN.png",
+      },
+      {
+        name: "1Password",
+        link: "https://1password.com/",
+        image: "img/sponsors/current/1Password.png",
+      },
+      {
+        name: "Linode",
+        link: "https://www.linode.com/",
+        image: "img/sponsors/current/Linode.png",
+      },
+    ],
+  },
+};
+
 export const PAST_SPONSORS = {
   header: "2020 Sponsors & Partners",
   gold: {
     label: "Gold",
     size: {
-      height: "12vh",
-      maxHeight: "85px",
+      height: "6vh",
+      maxHeight: "40px",
     },
     sponsors: [
       {
@@ -350,6 +415,15 @@ export const PAST_SPONSORS = {
         link: "https://1password.com/",
         image: "img/sponsors/past/1Password.png",
       },
+    ],
+  },
+  silver: {
+    label: "Silver",
+    size: {
+      height: "6vh",
+      maxHeight: "40px",
+    },
+    sponsors: [
       {
         name: "Balsamiq",
         link: "https://balsamiq.com/",
@@ -365,15 +439,6 @@ export const PAST_SPONSORS = {
         link: "https://www.bugsee.com/",
         image: "img/sponsors/past/bugsee.png",
       },
-    ],
-  },
-  silver: {
-    label: "Silver",
-    size: {
-      height: "10vh",
-      maxHeight: "65px",
-    },
-    sponsors: [
       {
         name: "Linode",
         link: "https://www.linode.com/",
@@ -389,8 +454,8 @@ export const PAST_SPONSORS = {
   bronze: {
     label: "Bronze",
     size: {
-      height: "5.5vh",
-      maxHeight: "35px",
+      height: "6vh",
+      maxHeight: "40px",
     },
     sponsors: [
       {

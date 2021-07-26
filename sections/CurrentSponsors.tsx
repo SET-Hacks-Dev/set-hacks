@@ -4,7 +4,7 @@ import { Text } from "../components";
 import styled from "styled-components";
 import { media } from "../theme";
 
-type PastSponsorsProps = {
+type CurrSponsorsProps = {
   header: string;
   gold: SponsorProps;
   silver: SponsorProps;
@@ -58,7 +58,7 @@ const PastSponsors = ({
   silver,
   bronze,
   dark = false,
-}: PastSponsorsProps) => {
+}: CurrSponsorsProps) => {
   return (
     <>
       <SponsorsWrapper dark={dark ? 1 : 0}>
@@ -76,7 +76,7 @@ const PastSponsors = ({
                     alt={sponsor.name}
                     height={gold.size.height}
                     sizes={gold.size.maxHeight}
-                    style={{ height: "3vh" }}
+                    style={{ height: "12.5vh" }}
                   />
                 </a>
               );
@@ -92,7 +92,6 @@ const PastSponsors = ({
                     alt={sponsor.name}
                     height={silver.size.height}
                     sizes={gold.size.maxHeight}
-                    style={{ height: "3vh" }}
                   />
                 </a>
               );
@@ -107,8 +106,8 @@ const PastSponsors = ({
                     src={sponsor.image}
                     alt={sponsor.name}
                     height={bronze.size.height}
-                    sizes={gold.size.maxHeight}
-                    style={{ height: "3vh" }}
+                    sizes={bronze.size.maxHeight}
+                    style={{ height: "4vh" }}
                   />
                 </a>
               );

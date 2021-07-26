@@ -16,7 +16,7 @@ export * from "./About1";
 export { default as About2 } from "./About2";
 export * from "./About2";
 
-export {default as Stars} from "./Stars";
+export { default as Stars } from "./Stars";
 export * from "./Stars";
 
 export { default as Stories } from "./Stories";
@@ -27,3 +27,6 @@ export * from "./Track";
 
 export { default as PastSponsors } from "./PastSponsors";
 export * from "./PastSponsors";
+
+export { default as CurrentSponsors } from "./CurrentSponsors";
+export * from "./CurrentSponsors";
