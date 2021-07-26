@@ -43,15 +43,13 @@ const Header = styled(Text)`
 
 const Logos = styled(Image)`
   cursor: pointer;
-  ${media.lg`height: ${(props) => props.height}`};
-  ${media.lg`max-height: ${(props) => props.sizes}`};
+  ${media.lg`height: ${(props) => props.height}`} !important;
+  ${media.lg`max-height: ${(props) => props.sizes}`} !important;
   &:hover {
     opacity: 0.8;
     transform: scale(1.03);
     transition: 0.4s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   }
-  height: 70px;
-  max-height: 5vh;
 `;
 
 const PastSponsors = ({
@@ -78,6 +76,7 @@ const PastSponsors = ({
                     alt={sponsor.name}
                     height={gold.size.height}
                     sizes={gold.size.maxHeight}
+                    style={{ height: "3vh" }}
                   />
                 </a>
               );
@@ -93,6 +92,7 @@ const PastSponsors = ({
                     alt={sponsor.name}
                     height={silver.size.height}
                     sizes={gold.size.maxHeight}
+                    style={{ height: "3vh" }}
                   />
                 </a>
               );
@@ -108,6 +108,7 @@ const PastSponsors = ({
                     alt={sponsor.name}
                     height={bronze.size.height}
                     sizes={gold.size.maxHeight}
+                    style={{ height: "3vh" }}
                   />
                 </a>
               );
