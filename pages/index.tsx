@@ -2,6 +2,7 @@ import {
   ABOUT_1,
   ABOUT_2,
   CONTACT,
+  CURRENT_SPONSORS,
   EXPLORE_TERMINAL,
   FAQ,
   FOOTER,
@@ -16,6 +17,7 @@ import {
 import {
   About1,
   About2,
+  CurrentSponsors,
   Faq,
   Hero,
   PastSponsors,
@@ -68,6 +70,8 @@ const Index = () => {
         <Spacer sz={14} />
         <Section {...SPONSORS} />
         <Spacer sz={8} />
+        <CurrentSponsors {...CURRENT_SPONSORS} />
+        <Spacer sz={14} />
         <PastSponsors {...PAST_SPONSORS} />
         <Spacer sz={8} />
         <Anchor i="faq" />
