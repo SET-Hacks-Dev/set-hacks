@@ -4,7 +4,7 @@ import { Text } from "../components";
 import styled from "styled-components";
 import { media } from "../theme";
 
-type PastSponsorsProps = {
+type SponsProps = {
   header: string;
   gold: SponsorProps;
   silver: SponsorProps;
@@ -16,6 +16,7 @@ type SponsorProps = {
   size: {
     height: string;
     maxHeight: string;
+    default: string;
   };
   sponsors: Spon[];
 };
@@ -41,7 +42,7 @@ const Header = styled(Text)`
   ${media.lg`font-size: 160%`};
 `;
 
-const Logos = styled(Image)`
+const Logos = styled(Image)<{ default: string }>`
   cursor: pointer;
   ${media.lg`height: ${(props) => props.height}`} !important;
   ${media.lg`max-height: ${(props) => props.sizes}`} !important;
@@ -50,15 +51,18 @@ const Logos = styled(Image)`
     transform: scale(1.03);
     transition: 0.4s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   }
+  height: ${(props) => props.default};
+  min-height: 20px;
 `;
 
-const PastSponsors = ({
+const Sponsors = ({
   header,
   gold,
   silver,
   bronze,
   dark = false,
-}: PastSponsorsProps) => {
+}: SponsProps) => {
+  console.log(gold.size.default);
   return (
     <>
       <SponsorsWrapper dark={dark ? 1 : 0}>
@@ -76,7 +80,7 @@ const PastSponsors = ({
                     alt={sponsor.name}
                     height={gold.size.height}
                     sizes={gold.size.maxHeight}
-                    style={{ height: "3vh" }}
+                    default={gold.size.default}
                   />
                 </a>
               );
@@ -91,8 +95,8 @@ const PastSponsors = ({
                     src={sponsor.image}
                     alt={sponsor.name}
                     height={silver.size.height}
-                    sizes={gold.size.maxHeight}
-                    style={{ height: "3vh" }}
+                    sizes={silver.size.maxHeight}
+                    default={silver.size.default}
                   />
                 </a>
               );
@@ -107,8 +111,8 @@ const PastSponsors = ({
                     src={sponsor.image}
                     alt={sponsor.name}
                     height={bronze.size.height}
-                    sizes={gold.size.maxHeight}
-                    style={{ height: "3vh" }}
+                    sizes={bronze.size.maxHeight}
+                    default={bronze.size.default}
                   />
                 </a>
               );
@@ -120,4 +124,4 @@ const PastSponsors = ({
   );
 };
 
-export default PastSponsors;
+export default Sponsors;

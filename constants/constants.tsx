@@ -333,6 +333,7 @@ export const CURRENT_SPONSORS = {
     size: {
       height: "30vh",
       maxHeight: "200px",
+      default: "12.5vh",
     },
     sponsors: [
       {
@@ -351,7 +352,8 @@ export const CURRENT_SPONSORS = {
     label: "Silver",
     size: {
       height: "10vh",
-      maxHeight: "65px",
+      maxHeight: "60px",
+      default: "8vh",
     },
     sponsors: [],
   },
@@ -360,6 +362,7 @@ export const CURRENT_SPONSORS = {
     size: {
       height: "9vh",
       maxHeight: "60px",
+      default: "4vh",
     },
     sponsors: [
       {
@@ -398,6 +401,7 @@ export const PAST_SPONSORS = {
     size: {
       height: "6vh",
       maxHeight: "40px",
+      default: "3vh",
     },
     sponsors: [
       {
@@ -422,6 +426,7 @@ export const PAST_SPONSORS = {
     size: {
       height: "6vh",
       maxHeight: "40px",
+      default: "3vh",
     },
     sponsors: [
       {
@@ -456,6 +461,7 @@ export const PAST_SPONSORS = {
     size: {
       height: "6vh",
       maxHeight: "40px",
+      default: "3vh",
     },
     sponsors: [
       {
