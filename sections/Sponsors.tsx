@@ -62,7 +62,6 @@ const Sponsors = ({
   bronze,
   dark = false,
 }: SponsProps) => {
-  console.log(gold.size.default);
   return (
     <>
       <SponsorsWrapper dark={dark ? 1 : 0}>

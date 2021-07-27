@@ -17,10 +17,10 @@ import {
 import {
   About1,
   About2,
-  Sponsors,
   Faq,
   Hero,
   Section,
+  Sponsors,
   Stars,
   Stories,
   Track,
