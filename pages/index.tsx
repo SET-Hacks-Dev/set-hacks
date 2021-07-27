@@ -17,10 +17,9 @@ import {
 import {
   About1,
   About2,
-  CurrentSponsors,
+  Sponsors,
   Faq,
   Hero,
-  PastSponsors,
   Section,
   Stars,
   Stories,
@@ -70,9 +69,9 @@ const Index = () => {
         <Spacer sz={14} />
         <Section {...SPONSORS} />
         <Spacer sz={8} />
-        <CurrentSponsors {...CURRENT_SPONSORS} />
+        <Sponsors {...CURRENT_SPONSORS} />
         <Spacer sz={14} />
-        <PastSponsors {...PAST_SPONSORS} />
+        <Sponsors {...PAST_SPONSORS} />
         <Spacer sz={8} />
         <Anchor i="faq" />
         <Spacer sz={14} />

@@ -25,8 +25,5 @@ export * from "./Stories";
 export { default as Track } from "./Track";
 export * from "./Track";
 
-export { default as PastSponsors } from "./PastSponsors";
-export * from "./PastSponsors";
-
-export { default as CurrentSponsors } from "./CurrentSponsors";
-export * from "./CurrentSponsors";
+export { default as Sponsors } from "./Sponsors";
+export * from "./Sponsors";
