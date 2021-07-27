@@ -52,6 +52,7 @@ const Logos = styled(Image)<{ default: string }>`
     transition: 0.4s transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   }
   height: ${(props) => props.default};
+  min-height: 20px;
 `;
 
 const Sponsors = ({
