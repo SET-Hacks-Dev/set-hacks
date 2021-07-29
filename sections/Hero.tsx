@@ -64,8 +64,13 @@ const Hero = () => {
                 <Chip {...chip} key={chip.label} />
               ))}
             </div>
-            <div className="w-100 mt-2 mb-3">
+            <div className="w-100 mt-2">
               {HOME.text.map((text) => {
+                return <div key={text}>{render(text)}</div>;
+              })} 
+            </div>
+            <div className="w-100 mt-2 mb-3">
+              {HOME.deadline.map((text) => {
                 return <div key={text}>{render(text)}</div>;
               })}
             </div>
