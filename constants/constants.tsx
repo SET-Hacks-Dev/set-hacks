@@ -391,6 +391,16 @@ export const CURRENT_SPONSORS = {
         link: "https://www.linode.com/",
         image: "img/sponsors/current/Linode.png",
       },
+      {
+        name: "DataCamp",
+        link: "https://www.datacamp.com/",
+        image: "img/sponsors/current/DataCamp.png",
+      },
+      {
+        name: "Volare Labs",
+        link: "https://www.volarelabs.io/",
+        image: "img/sponsors/current/Volare.png",
+      },
     ],
   },
 };
