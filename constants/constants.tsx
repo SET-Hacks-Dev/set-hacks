@@ -401,6 +401,11 @@ export const CURRENT_SPONSORS = {
         link: "https://www.volarelabs.io/",
         image: "img/sponsors/current/Volare.png",
       },
+      {
+        name: "Qoom",
+        link: "https://www.qoom.io/",
+        image: "img/sponsors/current/Qoom.png",
+      },
     ],
   },
 };
