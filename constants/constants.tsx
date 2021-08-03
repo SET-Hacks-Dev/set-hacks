@@ -68,7 +68,7 @@ export const HOME = {
     },
   },
   text: ["A high school hackathon to kickstart", "your journey into tech."],
-  deadline: ["Applications extended to *August 5 @ 11:59PM ET*"]
+  deadline: ["Applications extended to *August 10 @ 11:59PM ET*"]
 };
 
 export const ABOUT_1 = {
