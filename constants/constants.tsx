@@ -202,7 +202,7 @@ export const TRACK = {
   subheading: "Pre-hackathon | August 7-9",
   text: [
     "Our six learning tracks are customized to help you *understand* important topics in tech and learn how to *apply* them in solving complex, interdisciplinary problems. Prior to hacking weekend, you’ll have the chance to take a deep dive into one track of your choosing.",
-    "Each learning track is composed of an hour-long *workshop* each day from Monday to Wednesday, followed by a take-home *challenge* after the workshop.",
+    "Each learning track is composed of an hour-long *workshop* each day from Saturday to Monday, followed by a take-home *challenge* after the workshop.",
   ],
   tracks: [
     {
