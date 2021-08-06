@@ -68,7 +68,7 @@ export const HOME = {
     },
   },
   text: ["A high school hackathon to kickstart", "your journey into tech."],
-  deadline: ["Applications extended to *August 10 @ 11:59PM ET*"]
+  deadline: ["Applications extended to *August 10 @ 11:59PM ET*"],
 };
 
 export const ABOUT_1 = {
@@ -193,7 +193,7 @@ export const EXPLORE_TERMINAL = {
   ],
   link: {
     label: "View full schedule →",
-    href: "https://www.notion.so/sethacks/2021-Schedule-074c84aa1a184a84ba2b291311363540",
+    href: "https://bit.ly/SETHacks2021Schedule",
   },
 };
 
@@ -278,10 +278,6 @@ export const FAQ = {
       {
         q: "How much does it cost?",
         a: "Nothing! If your application is accepted, the event is completely free to attend.",
-      },
-      {
-        q: "When can I sign up?",
-        a: "Hacker applications will be released very soon! Keep an eye out on our social media or sign up for our mailing list to be notified first.",
       },
       {
         q: "I have another question!",
