@@ -402,6 +402,16 @@ export const CURRENT_SPONSORS = {
         link: "https://www.qoom.io/",
         image: "img/sponsors/current/Qoom.png",
       },
+      {
+        name: "Wolfram Language",
+        link: "https://www.wolfram.com/language/",
+        image: "img/sponsors/current/Wolfram.png",
+      },
+      {
+        name: "egghead.io",
+        link: "https://egghead.io/",
+        image: "img/sponsors/current/egghead.png",
+      },
     ],
   },
 };
