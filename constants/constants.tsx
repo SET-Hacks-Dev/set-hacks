@@ -68,7 +68,7 @@ export const HOME = {
     },
   },
   text: ["A high school hackathon to kickstart", "your journey into tech."],
-  deadline: ["Applications extended to *August 10 @ 11:59PM ET*"],
+  deadline: ["Continous round of applications closes", "*August 15 @ 10AM ET*"],
 };
 
 export const ABOUT_1 = {
@@ -135,7 +135,6 @@ export const STORIES = {
       link: "https://devpost.com/software/espere",
       quote:
         "SET.Hacks() was a really fun and rewarding experience! I got to learn new skills and use different tools while building my project, as well as participating in the many workshops they offer.",
-      // TODO - get an image for jerry
       headshot: "jerry.png",
     },
     {
@@ -325,6 +324,21 @@ export const CONTACT = {
 
 export const CURRENT_SPONSORS = {
   header: "Sponsors & Partners",
+  title: {
+    label: "Title",
+    size: {
+      height: "40vh",
+      maxHeight: "300px",
+      default: "15vh",
+    },
+    sponsors: [
+      {
+        name: "Spotify",
+        link: "https://www.spotify.com/",
+        image: "img/sponsors/current/Spotify.png",
+      },
+    ],
+  },
   gold: {
     label: "Gold",
     size: {
@@ -418,6 +432,15 @@ export const CURRENT_SPONSORS = {
 
 export const PAST_SPONSORS = {
   header: "2020 Sponsors & Partners",
+  title: {
+    label: "Title",
+    size: {
+      height: "40vh",
+      maxHeight: "300px",
+      default: "15vh",
+    },
+    sponsors: [],
+  },
   gold: {
     label: "Gold",
     size: {
