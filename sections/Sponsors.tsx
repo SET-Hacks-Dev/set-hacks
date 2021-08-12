@@ -64,6 +64,7 @@ const Sponsors = ({
   bronze,
   dark = false,
 }: SponsProps) => {
+  const tiers = [title, gold, silver, bronze];
   return (
     <>
       <SponsorsWrapper dark={dark ? 1 : 0}>
@@ -71,70 +72,27 @@ const Sponsors = ({
           <Header text={header} />
         </Row>
         <Row className="text-center">
-          <div>
-            {title.sponsors.map((sponsor) => {
-              return (
-                <a key={sponsor.name} href={sponsor.link} target="_blank">
-                  <Logos
-                    className="m-5"
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    height={title.size.height}
-                    sizes={title.size.maxHeight}
-                    default={title.size.default}
-                  />
-                </a>
-              );
-            })}
-          </div>
-          <div>
-            {gold.sponsors.map((sponsor) => {
-              return (
-                <a key={sponsor.name} href={sponsor.link} target="_blank">
-                  <Logos
-                    className="m-4"
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    height={gold.size.height}
-                    sizes={gold.size.maxHeight}
-                    default={gold.size.default}
-                  />
-                </a>
-              );
-            })}
-          </div>
-          <div>
-            {silver.sponsors.map((sponsor) => {
-              return (
-                <a key={sponsor.name} href={sponsor.link} target="_blank">
-                  <Logos
-                    className="m-4"
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    height={silver.size.height}
-                    sizes={silver.size.maxHeight}
-                    default={silver.size.default}
-                  />
-                </a>
-              );
-            })}
-          </div>
-          <div>
-            {bronze.sponsors.map((sponsor) => {
-              return (
-                <a key={sponsor.name} href={sponsor.link} target="_blank">
-                  <Logos
-                    className="m-4"
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    height={bronze.size.height}
-                    sizes={bronze.size.maxHeight}
-                    default={bronze.size.default}
-                  />
-                </a>
-              );
-            })}
-          </div>
+          {tiers.map((tier, index) => {
+            return (
+              <div key={index}>
+                {tier.sponsors.length > 0 &&
+                  tier.sponsors.map((sponsor) => {
+                    return (
+                      <a key={sponsor.name} href={sponsor.link} target="_blank">
+                        <Logos
+                          className={tier === title ? "m-5" : "m-4"}
+                          src={sponsor.image}
+                          alt={sponsor.name}
+                          height={tier.size.height}
+                          sizes={tier.size.maxHeight}
+                          default={tier.size.default}
+                        />
+                      </a>
+                    );
+                  })}
+              </div>
+            );
+          })}
         </Row>
       </SponsorsWrapper>
     </>
