@@ -6,6 +6,7 @@ import { media } from "../theme";
 
 type SponsProps = {
   header: string;
+  title: SponsorProps;
   gold: SponsorProps;
   silver: SponsorProps;
   bronze: SponsorProps;
@@ -57,6 +58,7 @@ const Logos = styled(Image)<{ default: string }>`
 
 const Sponsors = ({
   header,
+  title,
   gold,
   silver,
   bronze,
@@ -69,6 +71,22 @@ const Sponsors = ({
           <Header text={header} />
         </Row>
         <Row className="text-center">
+          <div>
+            {title.sponsors.map((sponsor) => {
+              return (
+                <a key={sponsor.name} href={sponsor.link} target="_blank">
+                  <Logos
+                    className="m-5"
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    height={title.size.height}
+                    sizes={title.size.maxHeight}
+                    default={title.size.default}
+                  />
+                </a>
+              );
+            })}
+          </div>
           <div>
             {gold.sponsors.map((sponsor) => {
               return (
