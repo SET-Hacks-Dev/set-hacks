@@ -30,10 +30,15 @@ const render = (text: string) => {
     else if (text[i] === "*") accent = !accent;
     else {
       if (accent) {
-        jsxMap.push(<Accent key={hashString(text[i])}>{text[i]}</Accent>);
+        jsxMap.push(
+          <Accent key={`${hashString(text[i])}-${text}-${i}`}>{text[i]}</Accent>
+        );
       } else {
         jsxMap.push(
-          <Highlight key={hashString(text[i])} active={highlight ? 1 : 0}>
+          <Highlight
+            key={`${hashString(text[i])}-${text}-${i}`}
+            active={highlight ? 1 : 0}
+          >
             {text[i]}
           </Highlight>
         );
