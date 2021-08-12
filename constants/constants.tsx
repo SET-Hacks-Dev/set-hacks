@@ -334,14 +334,19 @@ export const CURRENT_SPONSORS = {
     },
     sponsors: [
       {
-        name: "Distributed Compute Labs",
-        link: "https://distributed.computer/",
-        image: "img/sponsors/current/DCL.png",
-      },
-      {
         name: "#RisingYouth",
         link: "https://www.risingyouth.ca/",
         image: "img/sponsors/current/RisingYouth.png",
+      },
+      {
+        name: "McMaster Engineering",
+        link: "http://www.eng.mcmaster.ca/",
+        image: "img/sponsors/current/mcmaster.png",
+      },
+      {
+        name: "Distributed Compute Labs",
+        link: "https://distributed.computer/",
+        image: "img/sponsors/current/DCL.png",
       },
     ],
   },
