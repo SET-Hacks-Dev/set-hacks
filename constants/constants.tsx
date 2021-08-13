@@ -41,7 +41,7 @@ export const NAVIGATION = {
     { label: "Contact", href: "#contact" },
   ],
   actionButton: {
-    label: "Apply now",
+    label: "Register now",
     target: "https://0nvxc8nc62u.typeform.com/hacker-app",
   },
 };
@@ -58,12 +58,12 @@ export const HOME = {
   socialMedia: [
     { icon: Facebook, url: "https://www.facebook.com/pg/setnational/posts/" },
     { icon: Instagram, url: "https://www.instagram.com/setnational/" },
-    { icon: Devpost, url: "https://set-hacks.devpost.com" },
+    { icon: Devpost, url: "https://set-hacks-2021.devpost.com/" },
   ],
   image: "/img/section-graphic/rocket.png",
   apply: {
     actionButton: {
-      label: "Apply now",
+      label: "Register now",
       target: "https://0nvxc8nc62u.typeform.com/hacker-app",
     },
   },
@@ -191,8 +191,8 @@ export const EXPLORE_TERMINAL = {
     },
   ],
   link: {
-    label: "View full schedule →",
-    href: "https://bit.ly/SETHacks2021Schedule",
+    label: "Check out our Hacker Hub →",
+    href: "https://bit.ly/SETHacksHackerHub",
   },
 };
 
