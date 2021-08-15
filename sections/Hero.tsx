@@ -31,10 +31,6 @@ const Rocket = styled(Image)`
   ${media.lg`display: block`};
 `;
 
-// const Apply = styled.div`
-//   ${media.lg`display: none`};
-// `;
-
 const Hero = () => {
   return (
     <StyledContainer>

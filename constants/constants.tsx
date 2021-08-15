@@ -41,8 +41,8 @@ export const NAVIGATION = {
     { label: "Contact", href: "#contact" },
   ],
   actionButton: {
-    label: "Register now",
-    target: "https://0nvxc8nc62u.typeform.com/hacker-app",
+    label: "See winners",
+    target: "https://set-hacks-2021.devpost.com/",
   },
 };
 
@@ -63,12 +63,12 @@ export const HOME = {
   image: "/img/section-graphic/rocket.png",
   apply: {
     actionButton: {
-      label: "Register now",
-      target: "https://0nvxc8nc62u.typeform.com/hacker-app",
+      label: "See winners",
+      target: "https://set-hacks-2021.devpost.com/",
     },
   },
   text: ["A high school hackathon to kickstart", "your journey into tech."],
-  deadline: ["Continous round of applications closes", "*August 15 @ 10AM ET*"],
+  deadline: [""],
 };
 
 export const ABOUT_1 = {
